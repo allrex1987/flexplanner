@@ -1,0 +1,239 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$color_one: green;
+$color_two: yellow;
+
+* {
+  border-radius: 0 !important;
+}
+
+
+p {
+	font-size:16px;
+}
+h1 {
+	font-size:50px;
+}
+b {
+	color:$blue;
+	font-size:18px;
+}
+.white {
+	background-color:#cfe1e9;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+.panel {
+	background:$menu-gray;
+	border-radius: 2px !important;
+	border:1px solid $menu-border;
+	position: relative;
+}
+.panel-default {
+	
+}
+.panel-heading {
+	font-size:35px;
+	background:none !important;
+}
+
+
+.panel.arrow {
+	margin-top:30px;
+}
+.panel.arrow:after, .panel.arrow:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.panel.arrow:after {
+border-color: rgba(0, 0, 0, 0);
+	border-bottom-color: $menu-gray;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.panel.arrow:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: $menu-border;
+	border-width: 18px;
+	margin-left: -18px;
+}
+
+body {
+	background: url('../images/background.png') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color:none;
+	
+	font-family:'Slabo 27px', serif;
+}
+.navbar-default {
+	background-color:$blue-menu;
+	border:0;
+	
+	.navbar-nav li a {
+		color:white;
+		
+		&:hover {
+			background:$blue;
+			color:white;
+		}
+	}
+	
+	.navbar-nav > .open > a,
+	.navbar-nav > .open > a:hover,
+	.navbar-nav > .open > a:focus {
+	    background-color: $blue;
+		color:white;
+	}
+
+	.navbar-brand {
+		background:url("../images/logo-white.png");
+		background-size:175px 50px;
+		height:50px;
+		width:175px;
+	}
+	
+	.dropdown-menu {
+		background: $menu-gray;
+		border: 2px solid $menu-border;
+		padding:15px;
+		
+		&:after, &:before {
+			bottom: 100%;
+			right: 10%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+		&:after {
+			border-color: rgba(0, 0, 0, 0);
+			border-bottom-color: $menu-gray;
+			border-width: 5px;
+			margin-left: -5px;
+		}
+		&:before {
+			border-color: rgba(236, 237, 237, 0);
+			border-bottom-color: #eceded;
+			border-width: 8px;
+			margin-left: -8px;
+		}
+	}
+}
+
+.btn-primary, .link-btn {
+	border: 0px solid transparent;
+	position:relative;
+	height:40px;
+	display:block;
+	color:white;
+	font-family: arial;
+	font-weight:bold;
+	
+	&.small-btn {
+		width:200px;
+	} 
+	
+	&:hover {
+		color:white;
+		text-decoration:none;
+	}
+	
+	&.accept {
+		background:$green;
+		
+		.glyphicon {
+			background:darken($green, 10%);
+		}
+		&:hover {
+			background:darken($green, 10%);
+		}
+	}
+	&.default {
+		background:$blue;
+		
+		.glyphicon {
+			background:darken($blue, 10%);
+		}
+		&:hover {
+			background-color:darken($blue, 10%) !important;
+		}
+	}
+	
+	.glyphicon {
+		top:0;
+		height: 100%;
+		left:0;
+		width:40px;
+		line-height:40px;
+		position: absolute;
+	}
+}
+/*AKA -link-btn */
+.dropdown-menu > li > a, .link-btn {
+	padding-left:55px;
+	line-height:40px;
+	padding-top:0;
+	
+	.glyphicon {
+		padding-left:15px;
+	}
+}
+
+.form-control {
+	height:40px;
+}
+
+.has-feedback-left {
+	.glyphicon {
+		left:0;
+		position: absolute;
+		line-height:40px;
+	}
+	
+	input {
+		padding-left:30px;
+	}
+}
+
+form i.glyphicon {
+	color:$glyphicons;
+}
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 35px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+
