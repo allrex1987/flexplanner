@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
-class ListController extends Controller
+use App\User;
+
+class ProfilesController extends Controller
 {
-    public function show()
-    {
+    public function show($id) {
+		$user = User::find( $id );
+        return $user->role->role_name;
+    }
+	public function showProfile() {
+        return view('profile');
+    }
+	 public function show2() {
        $characters = [
          'Daenerys Targaryen' => 'Emilia Clarke',
          'Jon Snow'           => 'Kit Harington',

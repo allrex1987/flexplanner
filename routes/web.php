@@ -11,12 +11,16 @@
 |
 */
 
-Route::get('/', 'ListController@show');
-/*
+
 Route::get('/', function () {
     return view('welcome');
 });
-*/
+
+//Basic routing for built in Auth Laravel
 Auth::routes();
 
+//Homecontroller
 Route::get('/home', 'HomeController@index');
+
+//Show profile
+Route::get('user/{id}', 'UserController@show');

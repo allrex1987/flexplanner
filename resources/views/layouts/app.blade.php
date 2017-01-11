@@ -70,6 +70,11 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+									<li>
+                                        <a class="link-btn default" href="{{ url('user', [Auth::user()->id]) }}">
+													 <span class="Logout glyphicon glyphicon-log-out"></span> Din profil
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                         @endif

@@ -4,8 +4,8 @@
 
 <div class="col-md-8 col-md-offset-2">
 	<div class="col-md-6">
-		<h1>Teamer</h1>
-		<p> Teamer är ett <b>extremt slimmat</b>, <b>enkelt</b> och <b>effektivt planeringsverktyg</b>. Bygg ditt nätverk, skapa unika mallar, beställ material inom nätverket och planera ditt arbete på ett kick.<br>
+		<h1>Briefer</h1>
+		<p> Briefer är ett <b>extremt slimmat</b>, <b>enkelt</b> och <b>effektivt verktyg när du jobbar i team.</b>. Bygg ditt nätverk, skapa unika brifer, beställ material inom nätverket och planera ditt arbete på ett kick.<br>
 		<br><b>Glöm</b> dina wordmallar, gantscheman i excel, sharepoint och andra <b>krångliga system</b>. </p>
 	</div>
 
@@ -44,23 +44,5 @@
 	</div>
 </div>
 
-	<!-- @if(Auth::check())
-	  <!-- Table -->
-	  <!-- <table class="table">
-		  <tr>
-			  <th>Character</th>
-			  <th>Real Name</th>
-		  </tr>
-		  @foreach($characters as $key => $value)
-			<tr>
-			  <td>{{$key}}</td><td>{{$value}}</td>
-			</tr>
-		  @endforeach
-	  </table>
-	@endif
-
-	@if(Auth::guest())
-	  <a href="/login" class="link-btn default small-btn"><span class="glyphicon glyphicon-log-in"></span> Logga in</a>
-	@endif-->
 </div>
 @endsection
