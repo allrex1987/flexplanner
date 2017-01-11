@@ -3,9 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Role;
-use App\Team;
-use App\User;
+
 
 class Membership extends Model
 {
