@@ -71,7 +71,7 @@
                                         </form>
                                     </li>
 									<li>
-                                        <a class="link-btn default" href="{{ url('users', [Auth::user()]) }}">
+                                        <a class="btn default" href="{{ url('users', [Auth::user()]) }}">
 													 <span class="Logout glyphicon glyphicon-log-out"></span> Din profil
                                         </a>
                                     </li>
