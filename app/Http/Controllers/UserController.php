@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Membership;
+use Auth;
 
 class UserController extends Controller {
      /**
@@ -16,7 +17,7 @@ class UserController extends Controller {
     public function show(User $user) {
 
 		$memberships = Membership::with(array('role', 'team'))->where('user_id', '=', $user->id)->get();
-		return view('profile', ['memberships' => $memberships]);
+		return view('profile', ['memberships' => $memberships, 'user' => Auth::user()]);
     }
 	
 }

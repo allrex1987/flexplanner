@@ -4,10 +4,10 @@
 
 <div class="container">
 	<div class="panel default">
-		Username: {{ Auth::user()->name }}<br>
-		Email: {{ Auth::user()->email }}<br>
-		Skapad: {{ Auth::user()->created_at }}<br>
-		Updaterad: {{ Auth::user()->updated_at }}<br>
+		Username: {{ $user->name }}<br>
+		Email: {{ $user->email }}<br>
+		Skapad: {{ $user->created_at }}<br>
+		Updaterad: {{ $user->updated_at }}<br>
 		<br>
 		@foreach ($memberships as $membership)
 			<h3>Medlemskap</h3>
