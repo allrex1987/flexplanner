@@ -8,49 +8,48 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-$color_one: green;
-$color_two: yellow;
-
+/* --------MAIN ELEMENTS-------- */
 * {
-  border-radius: 0 !important;
+	/* remove bootstrap radius - remove this maby and reset all finds is better */
+	/*border-radius: 0;*/
 }
 
-
-
+h1 {
+	font-size:50px;
+}
 
 p {
 	font-size:16px;
 }
-h1 {
-	font-size:50px;
-}
+
 b {
 	color:$blue;
 	font-size:18px;
 }
+
+/* TODO - rename this class please*/  
 .white {
 	background-color:#cfe1e9;
 	padding-top:30px;
 	padding-bottom:30px;
 }
+
 .panel {
-	background:$menu-gray;
-	border-radius: 2px !important;
+	background:$default-background;
+	border-radius: 2px;
 	border:1px solid $menu-border;
 	position: relative;
 }
-.panel-default {
-	
-}
+
 .panel-heading {
 	font-size:35px;
 	background:none !important;
 }
 
-
 .panel.arrow {
 	margin-top:30px;
 }
+
 .panel.arrow:after, .panel.arrow:before {
 	bottom: 100%;
 	left: 50%;
@@ -64,10 +63,11 @@ b {
 
 .panel.arrow:after {
 border-color: rgba(0, 0, 0, 0);
-	border-bottom-color: $menu-gray;
+	border-bottom-color: $default-background;
 	border-width: 15px;
 	margin-left: -15px;
 }
+
 .panel.arrow:before {
 	border-color: rgba(255, 255, 255, 0);
 	border-bottom-color: $menu-border;
@@ -76,15 +76,12 @@ border-color: rgba(0, 0, 0, 0);
 }
 
 body {
-	background: url('../images/background.png') no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-color:none;
-	
+	background-color:default-background; 
 	font-family:'Slabo 27px', serif;
 }
+
+/* --------NAV-------- */
+
 .navbar-default {
 	background-color:$blue-menu;
 	border:0;
@@ -106,14 +103,14 @@ body {
 	}
 
 	.navbar-brand {
-		background:url("../images/logo-white.png");
+		background:url("/images/logo-white.png");
 		background-size:175px 50px;
 		height:50px;
 		width:175px;
 	}
 	
 	.dropdown-menu {
-		background: $menu-gray;
+		background: $default-background;
 		border: 2px solid $menu-border;
 		padding:15px;
 		
@@ -129,7 +126,7 @@ body {
 		}
 		&:after {
 			border-color: rgba(0, 0, 0, 0);
-			border-bottom-color: $menu-gray;
+			border-bottom-color: $default-background;
 			border-width: 5px;
 			margin-left: -5px;
 		}
@@ -142,9 +139,12 @@ body {
 	}
 }
 
-.btn-primary, .link-btn {
+/* --------BUTTONS-------- */
+
+.btn-primary, .btn {
 	border: 0px solid transparent;
 	position:relative;
+	border-radius:0;
 	height:40px;
 	display:block;
 	color:white;
@@ -190,8 +190,9 @@ body {
 		position: absolute;
 	}
 }
-/*AKA -link-btn */
-.dropdown-menu > li > a, .link-btn {
+
+/*AKA -btn */
+.dropdown-menu > li > a, .btn {
 	padding-left:55px;
 	line-height:40px;
 	padding-top:0;
@@ -200,6 +201,8 @@ body {
 		padding-left:15px;
 	}
 }
+
+/* --------FORMS-------- */
 
 .form-control {
 	height:40px;
@@ -232,6 +235,8 @@ form i.glyphicon {
     padding: 10px 12px;
     pointer-events: none;
 }
+
+/* --------IMAGES --------*/
 
 img {
 	max-width:100%;
