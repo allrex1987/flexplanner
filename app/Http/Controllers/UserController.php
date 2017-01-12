@@ -17,6 +17,7 @@ class UserController extends Controller {
 
 		$memberships = Membership::with(array('role', 'team'))->where('user_id', '=', $user->id)->get();
 		return view('profile', ['memberships' => $memberships]);
+        //Johan is the best
     }
 	
 }
