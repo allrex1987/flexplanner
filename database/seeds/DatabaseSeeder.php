@@ -18,11 +18,7 @@ class DatabaseSeeder extends Seeder
     {
 		Model::unguard();
 
-        // $this->call('UserTableSeeder');
         $this->call('UserTableSeeder');
-		$this->call('RolesTableSeeder');
-		$this->call('TeamsTableSeeder');
-		$this->call('MembershipsTableSeeder');
 
         Model::reguard();
 		
@@ -46,65 +42,57 @@ class UserTableSeeder extends Seeder {
             'password'	=> bcrypt('test'),
         ));
 
-	}
-}
-
-class RolesTableSeeder extends Seeder {
-    public function run() {
-		
-		DB::table('roles')->delete();
-		
-		$admin = Role::create(array(
+        //ROLES
+        DB::table('roles')->delete();
+        
+        $role_admin = Role::create(array(
             'role_name' => 'admin',
         ));
-		$member = Role::create(array(
+        $role_member = Role::create(array(
             'role_name' => 'member',
         ));
-		$sadmin = Role::create(array(
+        $role_sadmin = Role::create(array(
             'role_name' => 'sadmin',
         ));
-    }
-}
 
-class TeamsTableSeeder extends Seeder {
-    public function run() {
-		
-		DB::table('teams')->delete();
-		
-		$stenaline = Team::create(array(
+        //TEAMS
+        DB::table('teams')->delete();
+        
+        $team_1 = Team::create(array(
             'team_name' => 'Stena Line Inhouse',
             'email' => 'alexandra.johansson@stenaline.com',
-			'phone' => rand(1111111111,9999999999),
-			'adress' => 'En bra adress 3',
+            'phone' => rand(1111111111,9999999999),
+            'adress' => 'En bra adress 3',
         ));
-		$tinypickle = Team::create(array(
+        $team_2 = Team::create(array(
             'team_name' => 'Tinypickle',
             'email' => 'info@tinypickle.com',
-			'phone' => rand(1111111111,9999999999),
-			'adress' => 'En bra adress 3',
+            'phone' => rand(1111111111,9999999999),
+            'adress' => 'En bra adress 3',
         ));
-    }
-}
 
-class MembershipsTableSeeder extends Seeder {
-    public function run() {
-		
-		DB::table('memberships')->delete();
-		
-		$stenaline_admin = Membership::create(array(
-            'user_id' => 1,
-            'role_id' => 1,
-			'team_id' => 1,
-        ));
-		$stenaline_member = Membership::create(array(
-            'user_id' => 2,
-            'role_id' => 2,
-			'team_id' => 1,
-        ));
-		$tinypickle_admin = Membership::create(array(
-            'user_id' => 2,
-            'role_id' => 1,
-			'team_id' => 2,
-        ));
-    }
+
+        //MEMBERSHIPS
+        DB::table('memberships')->delete();
+
+        $membership_1 = New Membership([
+            'role_id' => $role_admin->id,
+            'team_id' => $team_1->id,
+        ]);
+
+        $membership_2 = New Membership([
+            'role_id' => $role_admin->id,
+            'team_id' => $team_2->id,
+        ]);
+
+        $membership_3 = New Membership([
+            'role_id' => $role_member->id,
+            'team_id' => $team_2->id,
+        ]);
+
+        $testUser->memberships()->save($membership_1);
+        $testUser->memberships()->save($membership_2);
+        $alexUser->memberships()->save($membership_3);
+
+	}
 }
