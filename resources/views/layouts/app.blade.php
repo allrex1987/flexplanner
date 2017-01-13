@@ -60,7 +60,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a class="link-btn default" href="{{ url('/logout') }}"
+                                        <a class="btn default" href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
 													 <span class="Logout glyphicon glyphicon-log-out"></span> Logga ut

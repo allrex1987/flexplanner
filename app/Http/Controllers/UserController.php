@@ -14,9 +14,9 @@ class UserController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function show(User $user) {
-
-		$memberships = Membership::with(array('role', 'team'))->where('user_id', '=', $user->id)->get();
+    public function show() {
+		$memberships = Membership::with(array('role', 'team'))->where('user_id', '=', 
+            $user = Auth::user()->id)->get();
 		return view('profile', ['memberships' => $memberships, 'user' => Auth::user()]);
     }
 	
