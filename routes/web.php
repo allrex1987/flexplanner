@@ -23,4 +23,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 //Show profile
-Route::get('/profile', 'UserController@show')->middleware('auth');;
+Route::get('/profile', 'UserController@show')->middleware('auth');
