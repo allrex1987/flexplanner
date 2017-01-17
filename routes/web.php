@@ -28,4 +28,4 @@ Route::get('/profile', 'UserController@show')->middleware('auth');;
 //ActivationRoute
 //TODO - It is best to put it under the Route::auth() ?
 //TODO - Change URL?
-Route::get('user/activation/{token}', 'Auth\AuthController@activateUser')->name('user.activate');
+Route::get('user/activation/{token}', 'Auth\LoginController@activateUser')->name('user.activate');
