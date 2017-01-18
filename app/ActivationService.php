@@ -29,15 +29,10 @@ class ActivationService {
         $token = $this->activationRepo->createActivation($user);
 
         $link = route('user.activate', $token);
-        $message = sprintf('Activate account <a href="%s">%s</a>', $link, $link);
-
-        /*
-        Mail::to($user)->send(new Mail($message, function (Message $m) use ($user) {
-            $m->to($user->email)->subject('Activation mail');
-        }));
-
-        */
-        Mail::to($user)->send(new ActivationMail);
+        
+        //From set to authenticated user in mailgun
+        //Mail::to($user->email)->send(new ActivationMail($link));
+        Mail::to('alexandra.johansson122@gmail.com')->send(new ActivationMail($link));
 
 
     }

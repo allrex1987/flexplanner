@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => 'hello@example.com',
+        'address' => 'ticket@sandbox22811cb90bc241b5adbfc645d6020571.mailgun.org',
         'name' => 'Example',
     ],
 

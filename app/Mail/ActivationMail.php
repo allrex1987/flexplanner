@@ -11,16 +11,14 @@ class ActivationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $total = 30;
-
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($activationlink)
     {
-        //
+        $this->activationlink = $activationlink;
     }
 
     /**
@@ -29,15 +27,19 @@ class ActivationMail extends Mailable
      * @return $this
      */
     public function build() {
-        $address = 'ignore@batcave.io';
-        $name = 'Ignore Me';
-        $subject = 'Krytonite Found';
+        //From set to authenticated user in mailgun
+        $address = 'alexandra.johansson122@gmail.com';
+        $name = 'Briefer.se';
+        $subject = 'Activation Mail';
 
         return $this->view('mails.activation')
-                    ->from($address, $name)
-                    ->cc($address, $name)
-                    ->bcc($address, $name)
-                    ->replyTo($address, $name)
-                    ->subject($subject);
+            ->from($address, $name)
+            ->subject($subject)
+            ->replyTo($address, $name)
+            ->bcc($address, $name)
+            ->cc($address, $name)
+            ->with([
+                'link' => $this->activationlink,
+            ]);
     }
 }
