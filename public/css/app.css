@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Slabo+13px);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Slabo+13px|Roboto);
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -7701,11 +7701,12 @@ body {
   color: #2d2d2d;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .panel-heading {
   font-family: "Bitter", serif;
   letter-spacing: -.1rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #636b6f !important;
 }
 
 h1 {
@@ -7720,6 +7721,20 @@ b {
   color: #465e9e;
 }
 
+.btn-center {
+  margin: 0 auto;
+}
+
+.buff {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.buff-big {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
 .panel, .custom-panel {
   background: #ededed;
   border-radius: 2px;
@@ -7729,13 +7744,14 @@ b {
 
 .custom-panel {
   background-color: #f1f1f1;
-  margin-top: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .panel-heading {
-  font-size: 35px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 30px;
   background: none !important;
 }
 
@@ -7766,6 +7782,11 @@ b {
   border-bottom-color: #d9d9d9;
   border-width: 18px;
   margin-left: -18px;
+}
+
+.icon {
+  max-width: 100%;
+  width: 350px;
 }
 
 /* --------NAV-------- */
@@ -7832,12 +7853,13 @@ b {
 .btn-primary, .btn {
   border: 0px solid transparent;
   position: relative;
-  border-radius: 0;
+  border-radius: 3;
   height: 40px;
   display: block;
   color: white;
-  font-family: arial;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 .btn-primary.small-btn, .btn.small-btn {
@@ -7850,19 +7872,21 @@ b {
 }
 
 .btn-primary.accept, .btn.accept {
-  background: #9bd449;
+  background: #1bbc9b;
+  box-shadow: 0px 3px 0px -1px #6c9629;
 }
 
 .btn-primary.accept .glyphicon, .btn.accept .glyphicon {
-  background: #82bd2d;
+  background: #158f76;
 }
 
 .btn-primary.accept:hover, .btn.accept:hover {
-  background: #82bd2d;
+  background: #158f76;
 }
 
 .btn-primary.default, .btn.default {
   background: #465e9e;
+  box-shadow: 0px 3px 0px -1px #1c2950;
 }
 
 .btn-primary.default .glyphicon, .btn.default .glyphicon {
@@ -7880,6 +7904,26 @@ b {
   width: 40px;
   line-height: 40px;
   position: absolute;
+}
+
+.btn-primary.big-btn, .btn.big-btn {
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+}
+
+.btn-primary.big-btn .glyphicon, .btn.big-btn .glyphicon {
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 60px;
+  line-height: 60px;
+  position: absolute;
+}
+
+.btn-primary.big-btn span, .btn.big-btn span {
+  font-size: 18px;
 }
 
 /*AKA -btn */

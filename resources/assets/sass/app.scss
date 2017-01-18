@@ -1,6 +1,6 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Slabo+13px);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Slabo+13px|Roboto);
 
 // Variables
 @import "variables";
@@ -21,11 +21,12 @@ body {
 	color:#2d2d2d;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .panel-heading {
 	font-family:$font-h;
 	letter-spacing: -.1rem;
 	font-weight: bold;
     text-transform: uppercase;
+    color:$text-color !important;
 }
 
 h1 {
@@ -39,6 +40,19 @@ b {
 	color:$blue;
 }
 
+.btn-center {
+	margin:0 auto;
+}
+
+.buff {
+	margin-top:50px;
+	margin-bottom:50px;
+}
+.buff-big {
+	margin-top:100px;
+	margin-bottom:50px;
+}
+
 .panel, .custom-panel {
 	background:$default-background;
 	border-radius: 2px;
@@ -48,13 +62,14 @@ b {
 
 .custom-panel {
 	background-color:$body-bg;
-	margin-top:30px;
 	padding-top:30px;
 	padding-bottom:30px;
 }
 
 .panel-heading {
-	font-size:35px;
+	padding-top:30px;
+	padding-bottom:30px;
+	font-size:30px;
 	background:none !important;
 }
 
@@ -85,6 +100,12 @@ border-color: rgba(0, 0, 0, 0);
 	border-bottom-color: $menu-border;
 	border-width: 18px;
 	margin-left: -18px;
+}
+
+.icon {
+	
+	max-width:100%;
+	width:350px;
 }
 
 /* --------NAV-------- */
@@ -151,12 +172,13 @@ border-color: rgba(0, 0, 0, 0);
 .btn-primary, .btn {
 	border: 0px solid transparent;
 	position:relative;
-	border-radius:0;
+	border-radius:3;
 	height:40px;
 	display:block;
 	color:white;
-	font-family: arial;
-	font-weight:bold;
+	text-transform:uppercase;
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 	
 	&.small-btn {
 		width:200px;
@@ -169,6 +191,7 @@ border-color: rgba(0, 0, 0, 0);
 	
 	&.accept {
 		background:$green;
+		box-shadow: 0px 3px 0px -1px #6c9629;
 		
 		.glyphicon {
 			background:darken($green, 10%);
@@ -179,6 +202,7 @@ border-color: rgba(0, 0, 0, 0);
 	}
 	&.default {
 		background:$blue;
+		box-shadow: 0px 3px 0px -1px #1c2950;
 		
 		.glyphicon {
 			background:darken($blue, 10%);
@@ -196,6 +220,25 @@ border-color: rgba(0, 0, 0, 0);
 		line-height:40px;
 		position: absolute;
 	}
+
+	&.big-btn {
+		width:300px;
+		height:60px;
+		line-height:60px;
+		font-size:20px;
+
+		.glyphicon {
+			top:0;
+			height: 100%;
+			left:0;
+			width:60px;
+			line-height:60px;
+			position: absolute;
+		}
+		span {
+			font-size:18px;
+		}
+	} 
 }
 
 /*AKA -btn */

@@ -9,10 +9,10 @@ $text-color: #636b6f;
 
 // Color
 $default-background:#ededed;
-$green: #9bd449;
-$green-darker:#8fc43e;
+$green: #1bbc9b;
+$green-darker:darken($green, 20%);
 $blue-menu:#2c3b64;
 $blue:#465e9e;
-$blue-darker:#384b83;
+$blue-darker:darken($blue, 20%);
 $glyphicons:#cccccc;
 $menu-border:#d9d9d9;
