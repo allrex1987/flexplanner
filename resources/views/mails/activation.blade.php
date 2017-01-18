@@ -1,5 +1,7 @@
-<h1>Woot Woot!!</h1>
+<h1>Välkommen till Briefer {{ $user }}!</h1>
 
-<p>Thanks for signing up! Please active your account in link below</p>
+<p>För att fullfölja din registrering behöver du aktivera ditt konto via länken nedan. Du blir automatiskt inloggad.</p>
+<p>Ditt användarnamn är din mail: {{ $email }}</p>
+<a href="{{ $link }}">{{ $link }}</a>
 
-<a href="{{$link}}">{{$link}}</a><br>
+<p>Hoppas du kommer ha mycket användning av Briefer!</p>

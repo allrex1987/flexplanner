@@ -16,9 +16,10 @@ class ActivationMail extends Mailable
      *
      * @return void
      */
-    public function __construct($activationlink)
+    public function __construct($activationlink, $user)
     {
         $this->activationlink = $activationlink;
+        $this->user = $user;
     }
 
     /**
@@ -26,11 +27,11 @@ class ActivationMail extends Mailable
      *
      * @return $this
      */
-    public function build() {
-        //From set to authenticated user in mailgun
-        $address = 'alexandra.johansson122@gmail.com';
-        $name = 'Briefer.se';
-        $subject = 'Activation Mail';
+    public function build()
+    {
+        $address = \Config::get('constants.activation_mail_from');
+        $name = \Config::get('constants.application_name');
+        $subject = \Config::get('constants.activation_mail_subject');
 
         return $this->view('mails.activation')
             ->from($address, $name)
@@ -39,7 +40,9 @@ class ActivationMail extends Mailable
             ->bcc($address, $name)
             ->cc($address, $name)
             ->with([
-                'link' => $this->activationlink,
+                'link'  => $this->activationlink,
+                'user'  => $this->user->name,
+                'email' => $this->user->email,
             ]);
     }
 }

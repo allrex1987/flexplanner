@@ -23,20 +23,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 //Show profile
-Route::get('/profile', 'UserController@show')->middleware('auth');;
+Route::get('/profile', 'UserController@show')->middleware('auth');
 
-//ActivationRoute
-//TODO - It is best to put it under the Route::auth() ?
-//TODO - Change URL?
+//Activate user
 Route::get('user/activation/{token}', 'Auth\LoginController@activateUser')->name('user.activate');
-
-/* Testning testning sending emails
-Route::get('send_test_email', function(){
-	Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
-	{
-		$message->subject('Mailgun and Laravel are awesome!');
-		$message->from('alexandra.johansson122@gmail.com', 'Website Name');
-		$message->to('alexandra.johansson122@gmail.com');
-	});
-});
-*/
