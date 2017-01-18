@@ -18,7 +18,8 @@ elixir(mix => {
 		.webpack('app.js');
 
 	mix.scripts([
-       		'jquery/dist/jquery.min.js'
+       		'jquery/dist/jquery.min.js',
+       		'bootstrap/dist/js/bootstrap.min.js'
 	    ],
 	    'public/js/vendor.js',
 	    'node_modules');
