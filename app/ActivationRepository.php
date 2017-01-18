@@ -8,19 +8,20 @@ use Illuminate\Database\Connection;
 class ActivationRepository {
 
     protected $db;
-
     protected $table = 'user_activations';
 
-    public function __construct(Connection $db) {
+    public function __construct(Connection $db) 
+    {
         $this->db = $db;
     }
 
-    protected function getToken() {
+    protected function getToken() 
+    {
         return hash_hmac('sha256', str_random(40), config('app.key'));
     }
 
-    public function createActivation($user) {
-
+    public function createActivation($user)
+    {
         $activation = $this->getActivation($user);
 
         if (!$activation) {
@@ -30,7 +31,8 @@ class ActivationRepository {
 
     }
 
-    private function regenerateToken($user) {
+    private function regenerateToken($user)
+    {
 
         $token = $this->getToken();
         $this->db->table($table)->where('user_id', $user->id)->update([
@@ -50,16 +52,19 @@ class ActivationRepository {
         return $token;
     }
 
-    public function getActivation($user) {
+    public function getActivation($user) 
+    {
         return $this->db->table($this->table)->where('user_id', $user->id)->first();
     }
 
 
-    public function getActivationByToken($token) {
+    public function getActivationByToken($token) 
+    {
         return $this->db->table($this->table)->where('token', $token)->first();
     }
 
-    public function deleteActivation($token) {
+    public function deleteActivation($token) 
+    {
         $this->db->table($this->table)->where('token', $token)->delete();
     }
 
