@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="container">
+	<a href="/profile/edit">Edit</a>
 	<div class="panel default">
 		Username: {{ $user->name }}<br>
 		Email: {{ $user->email }}<br>

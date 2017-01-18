@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index');
 //Show profile
 
 Route::get('/profile', 'UserController@show')->middleware('auth');;
+Route::get('/profile/edit', 'UserController@edit')->middleware('auth');;
 
 //ActivationRoute
 //TODO - It is best to put it under the Route::auth() ?
