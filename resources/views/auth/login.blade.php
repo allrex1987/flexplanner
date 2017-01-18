@@ -5,6 +5,16 @@
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default arrow">
             <div class="panel-heading text-center">Logga in</div>
+            @if (session('status'))
+			    <div class="alert alert-success">
+			        {{ session('status') }}
+			    </div>
+			@endif
+			@if (session('warning'))
+			    <div class="alert alert-warning">
+			        {{ session('warning') }}
+			    </div>
+			@endif
             <div class="panel-body">
                 <form class="form" role="form" method="POST" action="{{ url('/login') }}">
                     {{ csrf_field() }}
@@ -57,16 +67,6 @@
 						
 					</div>
                 </form>
-                @if (session('status'))
-				    <div class="alert alert-success">
-				        {{ session('status') }}
-				    </div>
-				@endif
-				@if (session('warning'))
-				    <div class="alert alert-warning">
-				        {{ session('warning') }}
-				    </div>
-				@endif
             </div>
         </div>
     </div>
