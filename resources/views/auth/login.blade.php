@@ -49,7 +49,8 @@
 							<button type="submit" class="accept btn-block btn btn-primary">
 								<span class="glyphicon glyphicon-log-in"></span> Logga in
 							</button>
-							<a class="btn btn-link btn-block" href="{{ url('/password/reset') }}">
+							<br>
+							<a class="btn-block text-center" href="{{ url('/password/reset') }}">
 								Glömt ditt lösenord?
 							</a>
 						</div>

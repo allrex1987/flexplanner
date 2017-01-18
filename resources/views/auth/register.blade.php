@@ -6,7 +6,6 @@
             <div class="panel panel-default arrow">
                 <div class="panel-heading text-center">Skaffa konto</div>
                 <div class="panel-body">
-				<p>Har ditt team redan ett konto? Be dem skicka en invite till dig för att ingå i det redan skapade kontot.</p>
                     <form class="form" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
 

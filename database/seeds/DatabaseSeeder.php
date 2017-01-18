@@ -34,12 +34,14 @@ class UserTableSeeder extends Seeder {
             'name'		=> str_random(10),
             'email'		=> 'test@test.com',
             'password'	=> bcrypt('test'),
+            'activated'  => true,
         ));
 		
 		$alexUser = User::create(array(
             'name'		=> 'Alexandra Johansson',
             'email'		=> 'alexandra.johansson122@gmail.com',
             'password'	=> bcrypt('test'),
+            'activated'  => true,
         ));
 
         //ROLES
