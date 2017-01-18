@@ -6,8 +6,10 @@
 	<a href="/profile">Profil</a>
 	<div class="panel default">
 
-		 <form class="form" role="form" method="POST" action="">
+		 <form class="form" role="form" method="POST" action="" data-module="ajax-form" data-url="/profile/update">
             {{ csrf_field() }}
+
+            <div class="alert" data-response-message></div>
 
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 <label for="name" class="control-label">Name</label>
@@ -52,7 +54,7 @@
             </div>
 			
             <div class="form-group">
-				<button type="submit" class="default btn-block btn btn-primary">
+				<button type="submit" class="default btn-block btn btn-primary" data-submit>
 					<span class="glyphicon glyphicon-ok"></span> Uppdatera
 				</button>
             </div>
@@ -61,3 +63,4 @@
 	</div>
 </div>
 @endsection
+

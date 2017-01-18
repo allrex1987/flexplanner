@@ -22,10 +22,13 @@ Auth::routes();
 //Homecontroller
 Route::get('/home', 'HomeController@index');
 
-//Show profile
+//Profile
 Route::get('/profile', 'UserController@show')->middleware('auth');;
-Route::get('/profile/edit', 'UserController@edit')->middleware('auth');;
+Route::get('/profile/edit', 'UserController@edit')->middleware('auth');
+Route::post('/profile/update', 'UserController@ajaxUpdate')->middleware('auth');
 
 
 //Activate user
 Route::get('user/activation/{token}', 'Auth\LoginController@activateUser')->name('user.activate');
+
+
