@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
+                <div class="panel-heading">Ändra lösenord</div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -33,8 +33,9 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Send Password Reset Link
+                                <button type="submit" class="btn btn-primary default">
+                                    <span class="glyphicon glyphicon-log-in"></span>
+                                    Skicka länk
                                 </button>
                             </div>
                         </div>
