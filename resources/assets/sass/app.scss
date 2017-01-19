@@ -5,6 +5,9 @@
 // Variables
 @import "variables";
 
+// Variables
+@import "mixins";
+
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -17,7 +20,7 @@
 body {
 	background:$body-bg;
 	font-family:$font-p;
-	font-size: 1.5em;
+	font-size: 15px;
 	color:#2d2d2d;
 }
 
@@ -40,14 +43,11 @@ b {
 	color:$blue;
 }
 
-.btn-center {
-	margin:0 auto;
-}
-
 .buff {
 	margin-top:50px;
 	margin-bottom:50px;
 }
+
 .buff-big {
 	margin-top:100px;
 	margin-bottom:50px;
@@ -61,9 +61,10 @@ b {
 }
 
 .custom-panel {
-	background-color:$body-bg;
-	padding-top:30px;
-	padding-bottom:30px;
+	background-color:darken($body-bg, 5%);
+	padding-top:50px;
+	padding-bottom:50px;
+	border:0;
 }
 
 .panel-heading {
@@ -103,7 +104,6 @@ border-color: rgba(0, 0, 0, 0);
 }
 
 .icon {
-	
 	max-width:100%;
 	width:350px;
 }
@@ -113,6 +113,10 @@ border-color: rgba(0, 0, 0, 0);
 .navbar-default {
 	background-color:$blue-menu;
 	border:0;
+
+	&.navbar {
+    	margin-bottom: 0px;
+	}
 	
 	.navbar-nav li a {
 		color:white;
@@ -173,16 +177,13 @@ border-color: rgba(0, 0, 0, 0);
 	border: 0px solid transparent;
 	position:relative;
 	border-radius:3;
-	height:40px;
-	display:block;
+	height:50px;
+	padding-right:25px;
+	display:inline-block;
 	color:white;
 	text-transform:uppercase;
 	font-family: 'Roboto', sans-serif;
     font-size: 16px;
-	
-	&.small-btn {
-		width:200px;
-	} 
 	
 	&:hover {
 		color:white;
@@ -196,18 +197,25 @@ border-color: rgba(0, 0, 0, 0);
 		.glyphicon {
 			background:darken($green, 10%);
 		}
-		&:hover {
+		&.square-btn .glyphicon {
+			background:$green;
+		}
+		&:hover, &:hover .glyphicon {
 			background:darken($green, 10%);
 		}
 	}
+
 	&.default {
 		background:$blue;
 		box-shadow: 0px 3px 0px -1px #1c2950;
-		
-		.glyphicon {
+
+		.glyphicon  {
 			background:darken($blue, 10%);
 		}
-		&:hover {
+		&.square-btn .glyphicon {
+			background:$blue;
+		}
+		&:hover, &:hover .glyphicon {
 			background-color:darken($blue, 10%) !important;
 		}
 	}
@@ -216,37 +224,52 @@ border-color: rgba(0, 0, 0, 0);
 		top:0;
 		height: 100%;
 		left:0;
-		width:40px;
-		line-height:40px;
 		position: absolute;
+		width:50px;
+		line-height:50px;
 	}
 
 	&.big-btn {
-		width:300px;
-		height:60px;
-		line-height:60px;
+		height:$big-btn;
+		padding-left:$big-btn+25px;
+		line-height:50px;
 		font-size:20px;
 
 		.glyphicon {
-			top:0;
-			height: 100%;
-			left:0;
 			width:60px;
 			line-height:60px;
-			position: absolute;
 		}
+
 		span {
 			font-size:18px;
 		}
 	} 
-}
 
-/*AKA -btn */
-.dropdown-menu > li > a, .btn {
-	padding-left:55px;
-	line-height:40px;
-	padding-top:0;
-	
+	&.tiny-btn {
+		height:$tiny-btn;
+		width:$tiny-btn;
+		padding-left:$tiny-btn+25px;
+
+		.glyphicon {
+			width:40px;
+			line-height:40px;
+		}
+	} 
+
+	&.square-btn {
+		padding:0;
+
+		.glyphicon {
+			position: relative;
+			top:0;
+		}
+		&.tiny-btn {
+			height:$tiny-btn;
+		}
+		&.big-btn {
+			height:$big-btn;
+		}
+	} 
 }
 
 /* --------FORMS-------- */
@@ -288,6 +311,42 @@ form i.glyphicon {
 img {
 	max-width:100%;
 	height:auto;
+
+	&.big-profile {
+		border-radius: 50%;
+		width: $big-profile;
+		height: $big-profile;
+	}
 }
 
+/* -------- PROFILE --------*/
 
+.profile {
+
+	position: relative;
+
+	.info {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-left:$big-profile +30px;
+
+		span {
+			display:block;
+		}
+
+		.name {
+			font-size:18px;
+		}
+
+		.role {
+			font-weight:bold;
+		}
+	}
+
+	.edit {
+		position:absolute;
+		top:30px;
+		right:30px;
+	}
+}

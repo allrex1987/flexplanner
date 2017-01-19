@@ -4,7 +4,7 @@ $body-bg:#f1f1f1;
 
 // Typography
 $font-h:"Bitter", serif;
-$font-p:"Slabo 13px", serif;
+$font-p:"Roboto", sans serif;
 $text-color: #636b6f;
 
 // Color
@@ -16,3 +16,10 @@ $blue:#465e9e;
 $blue-darker:darken($blue, 20%);
 $glyphicons:#cccccc;
 $menu-border:#d9d9d9;
+
+// Images
+$big-profile:150px;
+
+// Buttons
+$big-btn:60px;
+$tiny-btn:40px;

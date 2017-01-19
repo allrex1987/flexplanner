@@ -31,3 +31,9 @@ Route::post('/profile/update', 'UserController@ajaxUpdate')->middleware('auth');
 
 //Activate user
 Route::get('user/activation/{token}', 'Auth\LoginController@activateUser')->name('user.activate');
+
+//Ignore, just for html development profile
+Route::get('/profile-test', function()
+{
+    return View::make('profile/test', array('name' => 'Taylor'));
+});

@@ -10,8 +10,8 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-			<a class="accept btn big-btn btn-center" href=""><span class="glyphicon glyphicon-hand-right"></span>Testa gratis</a>
+		<div class="text-center">
+			<a class="accept btn big-btn" href=""><span class="glyphicon glyphicon-hand-right"></span>Testa gratis</a>
 		</div>
 	</div>
 </div>
