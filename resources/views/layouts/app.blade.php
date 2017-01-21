@@ -75,6 +75,11 @@
 													 <span class="Logout glyphicon glyphicon-log-out"></span> Din profil
                                         </a>
                                     </li>
+                                    <li>
+                                        <a class="btn default" href="{{ url('teams') }}">
+                                                     <span class="Logout glyphicon glyphicon-log-out"></span> Dina teams
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                         @endif

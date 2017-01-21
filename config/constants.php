@@ -11,4 +11,8 @@ return [
 
         'application_name'			=> 'Briefer.se',
 
+        'role_descriptions' 		=> array(
+        									1 => "Admin",
+        									2 => "Medlem"
+        								)
 ];

@@ -1,11 +1,3 @@
-// (function(briefer){
-
-// 	briefer.doStuff = function(){
-// 		alert('stuff done');
-// 	}
-
-// })(window.briefer);
-
 module.exports = (function(){
 	
 	var _successClass = 'alert-success';

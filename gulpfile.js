@@ -19,7 +19,8 @@ elixir(mix => {
 
 	mix.scripts([
        		'jquery/dist/jquery.min.js',
-       		'bootstrap/dist/js/bootstrap.min.js'
+       		'bootstrap/dist/js/bootstrap.min.js',
+       		'nunjucks/browser/nunjucks.min.js'
 	    ],
 	    'public/js/vendor.js',
 	    'node_modules');

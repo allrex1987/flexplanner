@@ -15,13 +15,13 @@ class UserController extends Controller {
      * @return Response
      */
     public function show() {
-		$memberships = Membership::with(array('role', 'team'))->where('user_id', '=', $user = Auth::user()->id)->get();
+		$memberships = Membership::with(array('team'))->where('user_id', '=', Auth::user()->id)->get();
 		return view('profile/profile', ['memberships' => $memberships, 'user' => Auth::user()]);
     }
 
 
 	public function edit() {
-        $memberships = Membership::with(array('role', 'team'))->where('user_id', '=', $user = Auth::user()->id)->get();
+        $memberships = Membership::with(array('team'))->where('user_id', '=', Auth::user()->id)->get();
         return view('profile/edit', ['memberships' => $memberships, 'user' => Auth::user()]);
     }
 
@@ -47,5 +47,16 @@ class UserController extends Controller {
         $user->save();
 
         return array('success' => true, 'message' => "Bra jobbat!");
+    }
+
+    public function ajaxGetTeams(){
+        return array('lists' => array(
+                'Medlem' => Auth::user()->teams
+            ));
+    }
+
+    public function jsonUsersByEmail(Request $request){
+        $searchStr = "%" . $request->input('email') . "%";
+        return User::where('email','like', $searchStr)->get();
     }
 }

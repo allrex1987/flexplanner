@@ -28,6 +28,17 @@ Route::get('/profile', 'UserController@show')->middleware('auth');;
 Route::get('/profile/edit', 'UserController@edit')->middleware('auth');
 Route::post('/profile/update', 'UserController@ajaxUpdate')->middleware('auth');
 
+//Where should this method be?????
+Route::get('/profile/teams', 'UserController@ajaxGetTeams')->middleware('auth');
+
+//Teams
+Route::get('/teams', 'TeamController@index')->middleware('auth');
+Route::get('/team/{id}', 'TeamController@ajaxShow')->middleware('auth');
+Route::post('/team/create', 'TeamController@ajaxCreate')->middleware('auth');
 
 //Activate user
 Route::get('user/activation/{token}', 'Auth\LoginController@activateUser')->name('user.activate');
+
+//Search
+Route::get('/search/userbyemail', 'UserController@jsonUsersByEmail')->middleware('auth');
+
