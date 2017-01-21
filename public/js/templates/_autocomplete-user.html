@@ -1,0 +1,7 @@
+<ul>
+{% for item in items %}
+  <li>{{ item.email }}: {{ item.name }}</li>
+{% else %}
+	<li>Inga unsers</li>
+{% endfor %}
+</ul>

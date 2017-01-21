@@ -6,12 +6,11 @@
             <div class="panel panel-default arrow">
                 <div class="panel-heading text-center">Skaffa konto</div>
                 <div class="panel-body">
-				<p>Har ditt team redan ett konto? Be dem skicka en invite till dig för att ingå i det redan skapade kontot.</p>
                     <form class="form" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="control-label">Name</label>
+                            <label for="name" class="control-label">Namn</label>
 
 							<input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
@@ -47,14 +46,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="control-label">Confirm Password</label>
+                            <label for="password-confirm" class="control-label">Bekräfta lösenord</label>
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                           
                         </div>
 						
                         <div class="form-group">
 							<button type="submit" class="default btn-block btn btn-primary">
-								<span class="glyphicon glyphicon-ok"></span> Register
+								<span class="glyphicon glyphicon-ok"></span> Skicka
 							</button>
                         </div>
                     </form>

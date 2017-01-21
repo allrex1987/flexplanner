@@ -42,3 +42,8 @@ Route::get('user/activation/{token}', 'Auth\LoginController@activateUser')->name
 //Search
 Route::get('/search/userbyemail', 'UserController@jsonUsersByEmail')->middleware('auth');
 
+//Ignore, just for html development profile
+Route::get('/profile-test', function()
+{
+    return View::make('profile/test', array('name' => 'Taylor'));
+});
