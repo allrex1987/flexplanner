@@ -74,6 +74,10 @@ module.exports = (function(){
 			$input.on('input', function(){
 				var inputValue = $input.val();
 				
+				if(inputValue.length == 0){
+					$target.html('');
+				}
+
 				if(inputValue.length < minLength) return;
 
 				var shortVal = inputValue.substring(0,minLength);

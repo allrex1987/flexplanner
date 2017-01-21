@@ -33,6 +33,8 @@ class UserTableSeeder extends Seeder {
 		$testUser = User::create(array(
             'name'		=> str_random(10),
             'email'		=> 'test@test.com',
+            'phone' => rand(1111111111,9999999999),
+            'title'     => 'Tester',
             'password'	=> bcrypt('test'),
             'activated'  => true,
         ));
@@ -40,22 +42,30 @@ class UserTableSeeder extends Seeder {
 		$alexUser = User::create(array(
             'name'		=> 'Alexandra Johansson',
             'email'		=> 'alexandra.johansson122@gmail.com',
+            'phone' => rand(1111111111,9999999999),
+            'title'     => 'Webmaster, Digital strateg',
             'password'	=> bcrypt('test'),
             'activated'  => true,
         ));
 
-        //ROLES
-        DB::table('roles')->delete();
-        
-        $role_admin = Role::create(array(
-            'role_name' => 'admin',
+        $johanUser = User::create(array(
+            'name'      => 'Johan Veeborn',
+            'email'     => 'johan.veeborn@gmail.com',
+            'phone' => rand(1111111111,9999999999),
+            'title'     => 'Supervisor, Special forces',
+            'password'  => bcrypt('test'),
+            'activated'  => true,
         ));
-        $role_member = Role::create(array(
-            'role_name' => 'member',
+
+        $randomUser = User::create(array(
+            'name'      => 'Random Dude',
+            'email'     => 'Random.Dude@gmail.com',
+            'phone' => rand(1111111111,9999999999),
+            'title'     => 'Specialis, Random jobs',
+            'password'  => bcrypt('test'),
+            'activated'  => true,
         ));
-        $role_sadmin = Role::create(array(
-            'role_name' => 'sadmin',
-        ));
+
 
         //TEAMS
         DB::table('teams')->delete();
@@ -74,27 +84,101 @@ class UserTableSeeder extends Seeder {
         ));
 
 
+        $team_3 = Team::create(array(
+            'team_name' => 'Everyones Team',
+            'email' => 'info@team.com',
+            'phone' => rand(1111111111,9999999999),
+            'adress' => 'Storgatan 1',
+        ));
+
         //MEMBERSHIPS
         DB::table('memberships')->delete();
 
-        $membership_1 = New Membership([
-            'role_id' => $role_admin->id,
+
+        // $membership_admin_team_1 = New Membership([
+        //     'role_id' => Role::ADMIN,
+        //     'team_id' => $team_1->id,
+        // ]);
+
+        // $membership_member_team_1 = New Membership([
+        //     'role_id' => Role::MEMBER,
+        //     'team_id' => $team_1->id,
+        // ]);
+
+        // $membership_admin_team_2 = New Membership([
+        //     'role_id' => Role::ADMIN,
+        //     'team_id' => $team_2->id,
+        // ]);
+
+        // $membership_member_team_2 = New Membership([
+        //     'role_id' => Role::MEMBER,
+        //     'team_id' => $team_2->id,
+        // ]);
+
+        // $membership_admin_team_3 = New Membership([
+        //     'role_id' => Role::ADMIN,
+        //     'team_id' => $team_3->id,
+        // ]);
+
+        // $membership_member_team_3 = New Membership([
+        //     'role_id' => Role::MEMBER,
+        //     'team_id' => $team_3->id,
+        // ]);
+
+
+        //Team 1 relations
+        $alexUser->memberships()->save(New Membership([
+            'role_id' => Role::ADMIN,
             'team_id' => $team_1->id,
-        ]);
+        ]));
+        $testUser->memberships()->save(New Membership([
+            'role_id' => Role::MEMBER,
+            'team_id' => $team_1->id,
+        ]));
+        $johanUser->memberships()->save(New Membership([
+            'role_id' => Role::MEMBER,
+            'team_id' => $team_1->id,
+        ]));
+        $randomUser->memberships()->save(New Membership([
+            'role_id' => Role::MEMBER,
+            'team_id' => $team_1->id,
+        ]));
 
-        $membership_2 = New Membership([
-            'role_id' => $role_admin->id,
+        //Team 2 relations
+        $testUser->memberships()->save(New Membership([
+            'role_id' => Role::ADMIN,
             'team_id' => $team_2->id,
-        ]);
-
-        $membership_3 = New Membership([
-            'role_id' => $role_member->id,
+        ]));
+        $johanUser->memberships()->save(New Membership([
+            'role_id' => Role::ADMIN,
             'team_id' => $team_2->id,
-        ]);
+        ]));
+        $randomUser->memberships()->save(New Membership([
+            'role_id' => Role::ADMIN,
+            'team_id' => $team_2->id,
+        ]));
+        $alexUser->memberships()->save(New Membership([
+            'role_id' => Role::MEMBER,
+            'team_id' => $team_2->id,
+        ]));
 
-        $testUser->memberships()->save($membership_1);
-        $testUser->memberships()->save($membership_2);
-        $alexUser->memberships()->save($membership_3);
 
+        //Team 3 relations
+        $testUser->memberships()->save($membership_member_team_3 = New Membership([
+            'role_id' => Role::MEMBER,
+            'team_id' => $team_3->id,
+        ]));
+        $alexUser->memberships()->save($membership_member_team_3 = New Membership([
+            'role_id' => Role::MEMBER,
+            'team_id' => $team_3->id,
+        ]));
+        $johanUser->memberships()->save($membership_member_team_3 = New Membership([
+            'role_id' => Role::MEMBER,
+            'team_id' => $team_3->id,
+        ]));
+        $randomUser->memberships()->save($membership_member_team_3 = New Membership([
+            'role_id' => Role::MEMBER,
+            'team_id' => $team_3->id,
+        ]));
 	}
 }

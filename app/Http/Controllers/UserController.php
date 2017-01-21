@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Membership;
 use Auth;
+use finfo;
 
 class UserController extends Controller {
      /**
@@ -23,6 +24,22 @@ class UserController extends Controller {
 	public function edit() {
         $memberships = Membership::with(array('team'))->where('user_id', '=', Auth::user()->id)->get();
         return view('profile/edit', ['memberships' => $memberships, 'user' => Auth::user()]);
+    }
+
+
+    public function avatar($id, Request $request){
+        $user = User::find($id);
+
+        if(is_null($user->avatar)){
+            $fileData = file_get_contents(public_path() . '\images\test-profile@2x.jpg');
+            return response()->make($fileData, 200, array(
+                'Content-Type' => 'image/jpeg'
+            ));
+        }
+
+        return response()->make($user->avatar, 200, array(
+            'Content-Type' => (new finfo(FILEINFO_MIME))->buffer($user->avatar)
+        ));
     }
 
     public function ajaxUpdate(Request $request) {

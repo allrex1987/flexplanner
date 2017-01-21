@@ -2,14 +2,27 @@
 
 @section('content')
 
-<div class="container">
-	<a href="/profile/edit">Edit</a>
-	<div class="panel default">
-		Username: {{ $user->name }}<br>
-		Email: {{ $user->email }}<br>
-		Skapad: {{ $user->created_at }}<br>
-		Updaterad: {{ $user->updated_at }}<br>
+
+<div class="custom-panel big-buff row center-text">
+	<div class="profile col-md-offset-5">
+		<!--<img alt="big profile image" class="big-profile" src="" />-->
+		<div class="image">
+			{{ Html::image('/user/'.$user->id.'/avatar', 'big profile image', array('class' => 'big-profile')) }}
+		</div>
+		<div class="info">
+			<span class="name">{{ $user->name }}</span>
+			<span class="role">{{ $user->title }}</span>
+			<span class="email">{{ $user->email }}</span>
+			<span class="phone">{{ $user->phone }}</span>
+		</div>
+		<a href="/profile/edit" class="edit btn default big-btn square-btn">
+			<span class="glyphicon glyphicon-edit"></span>
+		</a>
 	</div>
+</div>
+
+
+<div class="container">
 	<div class="panel default">
 		<h1>TEAM</h1>
 		<h3>Dina medlemskap</h3>

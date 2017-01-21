@@ -28,6 +28,9 @@ Route::get('/profile', 'UserController@show')->middleware('auth');;
 Route::get('/profile/edit', 'UserController@edit')->middleware('auth');
 Route::post('/profile/update', 'UserController@ajaxUpdate')->middleware('auth');
 
+//User
+Route::get('/user/{id}/avatar', "UserController@avatar");
+
 //Where should this method be?????
 Route::get('/profile/teams', 'UserController@ajaxGetTeams')->middleware('auth');
 
