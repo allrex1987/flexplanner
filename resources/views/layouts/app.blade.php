@@ -59,26 +59,26 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+									<li>
+                                        <a href="{{ url('profile') }}">
+													Din profil
+                                        </a>
+                                    </li>
                                     <li>
-                                        <a class="btn default" href="{{ url('/logout') }}"
+                                        <a href="{{ url('teams') }}">
+                                                     Dina teams
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a class="btn default tiny-btn" href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-													 <span class="Logout glyphicon glyphicon-log-out"></span> Logga ut
+                                                     <span class="Logout glyphicon glyphicon-log-out"></span> Logga ut
                                         </a>
 
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
-                                    </li>
-									<li>
-                                        <a class="btn default" href="{{ url('profile') }}">
-													 <span class="Logout glyphicon glyphicon-log-out"></span> Din profil
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="btn default" href="{{ url('teams') }}">
-                                                     <span class="Logout glyphicon glyphicon-log-out"></span> Dina teams
-                                        </a>
                                     </li>
                                 </ul>
                             </li>

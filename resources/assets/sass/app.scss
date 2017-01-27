@@ -38,6 +38,9 @@ h1 {
 h2 {
 	font-size:19px;
 }
+h3 {
+	font-size:14px;
+}
 
 b {
 	color:$blue;
@@ -51,6 +54,10 @@ b {
 .buff-big {
 	margin-top:100px;
 	margin-bottom:50px;
+}
+
+.container {
+	position: relative;
 }
 
 .panel, .custom-panel {
@@ -90,7 +97,7 @@ b {
 }
 
 .panel.arrow:after {
-border-color: rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0);
 	border-bottom-color: $default-background;
 	border-width: 15px;
 	margin-left: -15px;
@@ -117,63 +124,82 @@ border-color: rgba(0, 0, 0, 0);
 	&.navbar {
     	margin-bottom: 0px;
 	}
-	
-	.navbar-nav li a {
-		color:white;
-		
-		&:hover {
-			background:$blue;
-			color:white;
-		}
-	}
-	
-	.navbar-nav > .open > a,
-	.navbar-nav > .open > a:hover,
-	.navbar-nav > .open > a:focus {
-	    background-color: $blue;
+
+	.navbar-nav > li > a.dropdown-toggle {
 		color:white;
 	}
 
+	.navbar-nav > .open > a.dropdown-toggle,
+	.navbar-nav > .open > a.dropdown-toggle:hover,
+	.navbar-nav > .open > a.dropdown-toggle:focus {
+		background-color:$blue;
+		color:white;
+	}
+	
 	.navbar-brand {
 		background:url("/images/logo-white.png");
 		background-size:175px 50px;
 		height:50px;
 		width:175px;
 	}
+}
+
+.dropdown-menu {
+	background: $default-background;
+	border: 2px solid $menu-border;
+	padding:15px;
+
+	li a {
+		color:$text-color;
+	    margin: 0 0 10px 0;
+    	padding: 10px 0 10px 10px;
+
+    	&:hover, &:focus {
+    		background:darken($default-background, 5%)
+    	}
+	}
 	
-	.dropdown-menu {
-		background: $default-background;
-		border: 2px solid $menu-border;
-		padding:15px;
-		
-		&:after, &:before {
-			bottom: 100%;
-			right: 10%;
-			border: solid transparent;
-			content: " ";
-			height: 0;
-			width: 0;
-			position: absolute;
-			pointer-events: none;
-		}
-		&:after {
-			border-color: rgba(0, 0, 0, 0);
-			border-bottom-color: $default-background;
-			border-width: 5px;
-			margin-left: -5px;
-		}
-		&:before {
-			border-color: rgba(236, 237, 237, 0);
-			border-bottom-color: #eceded;
-			border-width: 8px;
-			margin-left: -8px;
-		}
+	&:after, &:before {
+		bottom: 100%;
+		right: 10%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	&:after {
+		border-color: rgba(0, 0, 0, 0);
+		border-bottom-color: $default-background;
+		border-width: 5px;
+		margin-left: -5px;
+	}
+	&:before {
+		border-color: rgba(236, 237, 237, 0);
+		border-bottom-color: #eceded;
+		border-width: 8px;
+		margin-left: -8px;
+	}
+}
+
+a.burger-menu {
+
+	font-size:25px;
+	margin-top:50px;
+	display:block;
+
+	.glyphicon {
+		top:5px;
+	}
+	&:hover, &:focus {
+		text-decoration:none;
 	}
 }
 
 /* --------BUTTONS-------- */
 
-.btn-primary, .btn {
+a.btn-primary, a.btn, .dropdown-menu > li > a.btn {
 	border: 0px solid transparent;
 	position:relative;
 	border-radius:3;
@@ -247,8 +273,8 @@ border-color: rgba(0, 0, 0, 0);
 
 	&.tiny-btn {
 		height:$tiny-btn;
-		width:$tiny-btn;
 		padding-left:$tiny-btn+25px;
+		line-height:35px;
 
 		.glyphicon {
 			width:40px;
@@ -270,6 +296,12 @@ border-color: rgba(0, 0, 0, 0);
 			height:$big-btn;
 		}
 	} 
+
+	&.section-btn {
+		position:absolute;
+		top:30px;
+		right:30px;
+	}
 }
 
 /* --------FORMS-------- */
@@ -323,8 +355,6 @@ img {
 
 .profile {
 
-	position: relative;
-
 	.info {
 		position: absolute;
 		top: 50%;
@@ -342,11 +372,5 @@ img {
 		.role {
 			font-weight:bold;
 		}
-	}
-
-	.edit {
-		position:absolute;
-		top:30px;
-		right:30px;
 	}
 }

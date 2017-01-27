@@ -33,10 +33,10 @@ class UserTableSeeder extends Seeder {
 		$testUser = User::create(array(
             'name'		=> str_random(10),
             'email'		=> 'test@test.com',
-            'phone' => rand(1111111111,9999999999),
+            'phone'     => rand(1111111111,9999999999),
             'title'     => 'Tester',
             'password'	=> bcrypt('test'),
-            'activated'  => true,
+            'activated' => true,
         ));
 		
 		$alexUser = User::create(array(
@@ -45,25 +45,25 @@ class UserTableSeeder extends Seeder {
             'phone' => rand(1111111111,9999999999),
             'title'     => 'Webmaster, Digital strateg',
             'password'	=> bcrypt('test'),
-            'activated'  => true,
+            'activated' => true,
         ));
 
         $johanUser = User::create(array(
             'name'      => 'Johan Veeborn',
             'email'     => 'johan.veeborn@gmail.com',
-            'phone' => rand(1111111111,9999999999),
+            'phone'     => rand(1111111111,9999999999),
             'title'     => 'Supervisor, Special forces',
             'password'  => bcrypt('test'),
-            'activated'  => true,
+            'activated' => true,
         ));
 
         $randomUser = User::create(array(
             'name'      => 'Random Dude',
             'email'     => 'Random.Dude@gmail.com',
-            'phone' => rand(1111111111,9999999999),
+            'phone'     => rand(1111111111,9999999999),
             'title'     => 'Specialis, Random jobs',
             'password'  => bcrypt('test'),
-            'activated'  => true,
+            'activated' => true,
         ));
 
 
@@ -72,23 +72,23 @@ class UserTableSeeder extends Seeder {
         
         $team_1 = Team::create(array(
             'team_name' => 'Stena Line Inhouse',
-            'email' => 'alexandra.johansson@stenaline.com',
-            'phone' => rand(1111111111,9999999999),
-            'adress' => 'En bra adress 3',
+            'email'     => 'alexandra.johansson@stenaline.com',
+            'phone'     => rand(1111111111,9999999999),
+            'adress'    => 'En bra adress 3',
         ));
         $team_2 = Team::create(array(
             'team_name' => 'Tinypickle',
-            'email' => 'info@tinypickle.com',
-            'phone' => rand(1111111111,9999999999),
-            'adress' => 'En bra adress 3',
+            'email'     => 'info@tinypickle.com',
+            'phone'     => rand(1111111111,9999999999),
+            'adress'    => 'En bra adress 3',
         ));
 
 
         $team_3 = Team::create(array(
             'team_name' => 'Everyones Team',
-            'email' => 'info@team.com',
-            'phone' => rand(1111111111,9999999999),
-            'adress' => 'Storgatan 1',
+            'email'     => 'info@team.com',
+            'phone'     => rand(1111111111,9999999999),
+            'adress'    => 'Storgatan 1',
         ));
 
         //MEMBERSHIPS

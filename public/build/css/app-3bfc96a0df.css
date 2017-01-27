@@ -7717,6 +7717,10 @@ h2 {
   font-size: 19px;
 }
 
+h3 {
+  font-size: 14px;
+}
+
 b {
   color: #465e9e;
 }
@@ -7729,6 +7733,10 @@ b {
 .buff-big {
   margin-top: 100px;
   margin-bottom: 50px;
+}
+
+.container {
+  position: relative;
 }
 
 .panel, .custom-panel {
@@ -7796,18 +7804,13 @@ b {
   margin-bottom: 0px;
 }
 
-.navbar-default .navbar-nav li a {
+.navbar-default .navbar-nav > li > a.dropdown-toggle {
   color: white;
 }
 
-.navbar-default .navbar-nav li a:hover {
-  background: #465e9e;
-  color: white;
-}
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .open > a.dropdown-toggle,
+.navbar-default .navbar-nav > .open > a.dropdown-toggle:hover,
+.navbar-default .navbar-nav > .open > a.dropdown-toggle:focus {
   background-color: #465e9e;
   color: white;
 }
@@ -7819,13 +7822,23 @@ b {
   width: 175px;
 }
 
-.navbar-default .dropdown-menu {
+.dropdown-menu {
   background: #ededed;
   border: 2px solid #d9d9d9;
   padding: 15px;
 }
 
-.navbar-default .dropdown-menu:after, .navbar-default .dropdown-menu:before {
+.dropdown-menu li a {
+  color: #636b6f;
+  margin: 0 0 10px 0;
+  padding: 10px 0 10px 10px;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu li a:focus {
+  background: #e0e0e0;
+}
+
+.dropdown-menu:after, .dropdown-menu:before {
   bottom: 100%;
   right: 10%;
   border: solid transparent;
@@ -7836,22 +7849,36 @@ b {
   pointer-events: none;
 }
 
-.navbar-default .dropdown-menu:after {
+.dropdown-menu:after {
   border-color: transparent;
   border-bottom-color: #ededed;
   border-width: 5px;
   margin-left: -5px;
 }
 
-.navbar-default .dropdown-menu:before {
+.dropdown-menu:before {
   border-color: rgba(236, 237, 237, 0);
   border-bottom-color: #eceded;
   border-width: 8px;
   margin-left: -8px;
 }
 
+a.burger-menu {
+  font-size: 25px;
+  margin-top: 50px;
+  display: block;
+}
+
+a.burger-menu .glyphicon {
+  top: 5px;
+}
+
+a.burger-menu:hover, a.burger-menu:focus {
+  text-decoration: none;
+}
+
 /* --------BUTTONS-------- */
-.btn-primary, .btn {
+a.btn-primary, a.btn, .dropdown-menu > li > a.btn {
   border: 0px solid transparent;
   position: relative;
   border-radius: 3;
@@ -7864,46 +7891,46 @@ b {
   font-size: 16px;
 }
 
-.btn-primary:hover, .btn:hover {
+a.btn-primary:hover, a.btn:hover, .dropdown-menu > li > a.btn:hover {
   color: white;
   text-decoration: none;
 }
 
-.btn-primary.accept, .btn.accept {
+a.btn-primary.accept, a.btn.accept, .dropdown-menu > li > a.btn.accept {
   background: #1bbc9b;
   box-shadow: 0px 3px 0px -1px #6c9629;
 }
 
-.btn-primary.accept .glyphicon, .btn.accept .glyphicon {
+a.btn-primary.accept .glyphicon, a.btn.accept .glyphicon, .dropdown-menu > li > a.btn.accept .glyphicon {
   background: #158f76;
 }
 
-.btn-primary.accept.square-btn .glyphicon, .btn.accept.square-btn .glyphicon {
+a.btn-primary.accept.square-btn .glyphicon, a.btn.accept.square-btn .glyphicon, .dropdown-menu > li > a.btn.accept.square-btn .glyphicon {
   background: #1bbc9b;
 }
 
-.btn-primary.accept:hover, .btn-primary.accept:hover .glyphicon, .btn.accept:hover, .btn.accept:hover .glyphicon {
+a.btn-primary.accept:hover, a.btn-primary.accept:hover .glyphicon, a.btn.accept:hover, a.btn.accept:hover .glyphicon, .dropdown-menu > li > a.btn.accept:hover, .dropdown-menu > li > a.btn.accept:hover .glyphicon {
   background: #158f76;
 }
 
-.btn-primary.default, .btn.default {
+a.btn-primary.default, a.btn.default, .dropdown-menu > li > a.btn.default {
   background: #465e9e;
   box-shadow: 0px 3px 0px -1px #1c2950;
 }
 
-.btn-primary.default .glyphicon, .btn.default .glyphicon {
+a.btn-primary.default .glyphicon, a.btn.default .glyphicon, .dropdown-menu > li > a.btn.default .glyphicon {
   background: #36497b;
 }
 
-.btn-primary.default.square-btn .glyphicon, .btn.default.square-btn .glyphicon {
+a.btn-primary.default.square-btn .glyphicon, a.btn.default.square-btn .glyphicon, .dropdown-menu > li > a.btn.default.square-btn .glyphicon {
   background: #465e9e;
 }
 
-.btn-primary.default:hover, .btn-primary.default:hover .glyphicon, .btn.default:hover, .btn.default:hover .glyphicon {
+a.btn-primary.default:hover, a.btn-primary.default:hover .glyphicon, a.btn.default:hover, a.btn.default:hover .glyphicon, .dropdown-menu > li > a.btn.default:hover, .dropdown-menu > li > a.btn.default:hover .glyphicon {
   background-color: #36497b !important;
 }
 
-.btn-primary .glyphicon, .btn .glyphicon {
+a.btn-primary .glyphicon, a.btn .glyphicon, .dropdown-menu > li > a.btn .glyphicon {
   top: 0;
   height: 100%;
   left: 0;
@@ -7912,48 +7939,54 @@ b {
   line-height: 50px;
 }
 
-.btn-primary.big-btn, .btn.big-btn {
+a.btn-primary.big-btn, a.btn.big-btn, .dropdown-menu > li > a.btn.big-btn {
   height: 60px;
   padding-left: 85px;
   line-height: 50px;
   font-size: 20px;
 }
 
-.btn-primary.big-btn .glyphicon, .btn.big-btn .glyphicon {
+a.btn-primary.big-btn .glyphicon, a.btn.big-btn .glyphicon, .dropdown-menu > li > a.btn.big-btn .glyphicon {
   width: 60px;
   line-height: 60px;
 }
 
-.btn-primary.big-btn span, .btn.big-btn span {
+a.btn-primary.big-btn span, a.btn.big-btn span, .dropdown-menu > li > a.btn.big-btn span {
   font-size: 18px;
 }
 
-.btn-primary.tiny-btn, .btn.tiny-btn {
+a.btn-primary.tiny-btn, a.btn.tiny-btn, .dropdown-menu > li > a.btn.tiny-btn {
   height: 40px;
-  width: 40px;
   padding-left: 65px;
+  line-height: 35px;
 }
 
-.btn-primary.tiny-btn .glyphicon, .btn.tiny-btn .glyphicon {
+a.btn-primary.tiny-btn .glyphicon, a.btn.tiny-btn .glyphicon, .dropdown-menu > li > a.btn.tiny-btn .glyphicon {
   width: 40px;
   line-height: 40px;
 }
 
-.btn-primary.square-btn, .btn.square-btn {
+a.btn-primary.square-btn, a.btn.square-btn, .dropdown-menu > li > a.btn.square-btn {
   padding: 0;
 }
 
-.btn-primary.square-btn .glyphicon, .btn.square-btn .glyphicon {
+a.btn-primary.square-btn .glyphicon, a.btn.square-btn .glyphicon, .dropdown-menu > li > a.btn.square-btn .glyphicon {
   position: relative;
   top: 0;
 }
 
-.btn-primary.square-btn.tiny-btn, .btn.square-btn.tiny-btn {
+a.btn-primary.square-btn.tiny-btn, a.btn.square-btn.tiny-btn, .dropdown-menu > li > a.btn.square-btn.tiny-btn {
   height: 40px;
 }
 
-.btn-primary.square-btn.big-btn, .btn.square-btn.big-btn {
+a.btn-primary.square-btn.big-btn, a.btn.square-btn.big-btn, .dropdown-menu > li > a.btn.square-btn.big-btn {
   height: 60px;
+}
+
+a.btn-primary.section-btn, a.btn.section-btn, .dropdown-menu > li > a.btn.section-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 /* --------FORMS-------- */
@@ -8002,10 +8035,6 @@ img.big-profile {
 }
 
 /* -------- PROFILE --------*/
-.profile {
-  position: relative;
-}
-
 .profile .info {
   position: absolute;
   top: 50%;
@@ -8024,12 +8053,6 @@ img.big-profile {
 
 .profile .info .role {
   font-weight: bold;
-}
-
-.profile .edit {
-  position: absolute;
-  top: 30px;
-  right: 30px;
 }
 
 /*# sourceMappingURL=app.css.map */

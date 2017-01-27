@@ -1,4 +1,18 @@
+{% extends "_autocomplete-user.html" %}
+
 <div>
 	<div>Din roll: {{ user_role_description }}</div>
 	<div>Team view: {{ team.team_name }}</div>
+</div>
+
+<div>
+	{{ super() }}
+</div>
+
+<div>
+	<ul>
+	{% for user in team.users %}
+		<li>{{ user.name }}</li>
+	{% endfor%}
+	</ul>
 </div>
