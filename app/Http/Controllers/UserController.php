@@ -74,6 +74,7 @@ class UserController extends Controller {
 
     public function jsonUsersByEmail(Request $request){
         $searchStr = "%" . $request->input('email') . "%";
-        return User::where('email','like', $searchStr)->get();
+        //dd(User::where('email','like', $searchStr)->get());
+        return response()->json(User::where('email','like', $searchStr)->get());
     }
 }

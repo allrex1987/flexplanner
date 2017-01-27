@@ -14,6 +14,6 @@ namespace App;
 // }
 
 class Role{
-	const ADMIN = 1;
-	const MEMBER = 2;	
+	const ADMIN = 0;
+	const MEMBER = 1;	
 }

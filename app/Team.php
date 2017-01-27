@@ -9,6 +9,7 @@ class Team extends Model
 	protected $fillable = [
         'team_name', 'email', 'phone', 'adress'
     ];
+    
 
 	function memberships() {
 	   //return $this->hasMany('App\User', 'memberships');

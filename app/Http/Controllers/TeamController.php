@@ -22,26 +22,30 @@ class TeamController extends Controller {
 
 		$user_role_description = null;
 
-		//Add user membership to user object
+		// //Add user membership to user object
 		$users = array();
-		foreach ($team->users as $user) {
+		foreach ($team->users() as $user) {
 			$membershipStatus  = $user->pivot->role_id;
-
 			$role_description = \Config::get('constants.role_descriptions.' . $membershipStatus);
-
+			
 			$user->role_description = $role_description;
 
 			if($user_id == $user->id){
 				$user_role_description = $role_description;
 			}
-			//array_push($users, $user);
+
+			array_push($users, $user);
 		}
 
+		//dd($team);
 		return array(
 			'user_role_description' => $user_role_description,
-			'team' => $team,
-			//'members' => $users
+			'team' => $team
 		);
+		return response()->json(array(
+			'user_role_description' => $user_role_description,
+			'team' => $team
+		), 200, [], JSON_UNESCAPED_UNICODE);
 	}
 
 	public function ajaxCreate(Request $request){
