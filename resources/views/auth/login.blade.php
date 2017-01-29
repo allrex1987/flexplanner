@@ -2,9 +2,11 @@
 
 @section('content')
 <div class="container">
-    <div class="col-md-4 col-md-offset-4">
-        <div class="panel panel-default arrow">
-            <div class="panel-heading text-center">Logga in</div>
+    <div class="four columns offset-by-four panel arrow">
+     
+            <h1 class="panel-heading text-center">
+				Logga in
+			</h1>
             @if (session('status'))
 			    <div class="alert alert-success">
 			        {{ session('status') }}
@@ -21,7 +23,7 @@
 
                     <div class="form-group left-inner-addon {{ $errors->has('email') ? ' has-error' : '' }}">
 						
-						<i class="glyphicon glyphicon-envelope"></i>
+						<label for="email" class="control-label">Email</label>
 						<input id="email" placeholder="Email" type="email" class=" form-control" name="email" value="{{ old('email') }}" required autofocus>
 						
 						@if ($errors->has('email'))
@@ -34,7 +36,7 @@
 
                     <div class="form-group left-inner-addon {{ $errors->has('password') ? ' has-error' : '' }}">
 			
-						<i class="glyphicon glyphicon-lock"></i>
+						<label for="password" class="control-label">Lösenord</label>
 						<input placeholder="Lösenord" id="password" type="password" class=" form-control" name="password" required>
 
 						@if ($errors->has('password'))
@@ -55,19 +57,19 @@
 							</div>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group text-center">
 							<button type="submit" class="accept btn-block btn btn-primary">
-								<span class="glyphicon glyphicon-log-in"></span> Logga in
+								<i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+								Logga in
 							</button>
 							<br>
-							<a class="btn-block text-center" href="{{ url('/password/reset') }}">
+							<a href="{{ url('/password/reset') }}">
 								Glömt ditt lösenord?
 							</a>
 						</div>
 						
 					</div>
                 </form>
-            </div>
         </div>
     </div>
 </div>

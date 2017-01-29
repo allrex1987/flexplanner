@@ -2,22 +2,23 @@
 
 @section('content')
 
-
-<div class="custom-panel big-buff row center-text">
-	<div class="profile col-md-offset-5">
-		<!--<img alt="big profile image" class="big-profile" src="" />-->
-		<div class="image">
-			{{ Html::image('/user/'.$user->id.'/avatar', 'big profile image', array('class' => 'big-profile')) }}
+<div class="custom-panel big-buff">
+	<div class="container profile text-center">
+		<div class="row">
+			{{ Html::image('/user/'.$user->id.'/avatar', 'big profile', array('class' => 'big-profile')) }}
 		</div>
-		<div class="info">
-			<span class="name">{{ $user->name }}</span>
-			<span class="role">{{ $user->title }}</span>
-			<span class="email">{{ $user->email }}</span>
-			<span class="phone">{{ $user->phone }}</span>
+		<div class="row">
+			<div class="info">
+				<span class="name">{{ $user->name }}</span>
+				<span class="role">{{ $user->title }}</span>
+				<span class="email">{{ $user->email }}</span>
+				<span class="phone">{{ $user->phone }}</span>
+			</div>
+			<a href="/profile/edit" class="edit btn default">
+				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+				Redigera
+			</a>
 		</div>
-		<a href="/profile/edit" class="edit btn default big-btn square-btn">
-			<span class="glyphicon glyphicon-edit"></span>
-		</a>
 	</div>
 </div>
 

@@ -11,6 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ elixir('css/all.css') }}" rel="stylesheet">
     <link href="{{ elixir ('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
@@ -22,43 +24,44 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar-default">
             <div class="container">
                 <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
+                    <!-- Collapsed Hamburger
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>
+                    </button> -->
 
-                    <!-- Branding Image -->
+                </div>
+
+                <div class="nav">
+
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <!--{{ config('app.name', 'Laravel') }} -->
                     </a>
-                </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="navbar navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Logga in</a></li>
-                            <li><a href="{{ url('/register') }}">Skaffa konto</a></li>
+                            <li>
+                                <a {{ (Request::is('login') ? 'class=active' : '') }} href="{{ url('/login') }}">Logga in</a>
+                            </li>
+                            <li>
+                                <a {{ (Request::is('register') ? 'class=active' : '') }} href="{{ url('/register') }}">Skaffa konto</a>
+                            </li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+                                    {{ Auth::user()->name }}
+                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu">
 									<li>
                                         <a href="{{ url('profile') }}">
 													Din profil
@@ -70,10 +73,18 @@
                                         </a>
                                     </li>
                                      <li>
-                                        <a class="btn default tiny-btn" href="{{ url('/logout') }}"
+                                        <!--<a class="btn default tiny-btn" href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                                     <span class="Logout glyphicon glyphicon-log-out"></span> Logga ut
+                                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                                     Logga ut
+                                        </a>-->
+
+                                         <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                                     Logga ut
                                         </a>
 
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

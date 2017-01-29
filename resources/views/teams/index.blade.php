@@ -8,7 +8,7 @@
 		
 		<div data-module="ajax-list" data-url="/profile/teams"></div>
 
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createTeamModal">
+		<button type="button" class="btn default btn-lg" data-toggle="modal" data-target="#createTeamModal">
 		  Skapa team
 		</button>
 	</div>
@@ -25,7 +25,7 @@
 	    		{{ csrf_field() }}
 
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<button type="button" class="close warning" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h4 class="modal-title" id="myModalLabel">Skapa team</h4>
 				</div>
 	     
@@ -50,8 +50,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" data-submit>Spara team</button>
+					<button type="button" class="btn warning" data-dismiss="modal">Close</button>
+					<button type="button" class="btn accept" data-submit>Spara team</button>
 				</div>
 			</form>
 		</div>

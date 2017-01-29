@@ -19,13 +19,18 @@ elixir(mix => {
 
 	mix.scripts([
        		'jquery/dist/jquery.min.js',
-       		'bootstrap/dist/js/bootstrap.min.js',
+       		//'bootstrap/dist/js/bootstrap.min.js',
        		'nunjucks/browser/nunjucks.min.js'
 	    ],
 	    'public/js/vendor.js',
 	    'node_modules');
 
 	mix.version('css/app.css');
+
+ 	mix.styles([
+		'normalize.css',
+		'skeleton.css'
+	]);
 
 	mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/fonts/bootstrap');
 	 

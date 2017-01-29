@@ -8,42 +8,26 @@
 // Variables
 @import "mixins";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 /* --------MAIN ELEMENTS-------- */
-* {
-	/* remove bootstrap radius - remove this maby and reset all finds is better */
-	/*border-radius: 0;*/
-}
 
-body {
-	background:$body-bg;
-	font-family:$font-p;
-	font-size: 15px;
-	color:#2d2d2d;
-}
-
-h1, h2, h3, h4, h5, .panel-heading {
-	font-family:$font-h;
-	letter-spacing: -.1rem;
-	font-weight: bold;
-    text-transform: uppercase;
-    color:$text-color !important;
-}
-
-h1 {
-	font-size:35px;
-}
-h2 {
-	font-size:19px;
-}
-h3 {
-	font-size:14px;
+.columns {
+	padding:15px;
 }
 
 b {
 	color:$blue;
+}
+
+.text-center {
+	text-align:center;
+}
+
+.big-nbr {
+	font-size:120px;
+	line-height:150px;
+	color:$blue;
+	margin:0;
+	font-family:$font-h;
 }
 
 .buff {
@@ -76,9 +60,13 @@ b {
 
 .panel-heading {
 	padding-top:30px;
-	padding-bottom:30px;
+	padding-bottom:20px;
+	font-family: "Roboto", sans-serif;
+	font-weight:400;
+	letter-spacing:0;
 	font-size:30px;
 	background:none !important;
+	border-bottom:1px solid lightgrey;
 }
 
 .panel.arrow {
@@ -110,76 +98,101 @@ b {
 	margin-left: -18px;
 }
 
-.icon {
-	max-width:100%;
-	width:350px;
+.header-icon {
+	background:url("/images/logo.png");
+	background-size:350px;
+	background-repeat:no-repeat;
+	background-position:center 0;
+	font-family: "Bitter", sans-serif;
+	font-weight: bold;
+	font-size:45px;
+	text-transform:uppercase;
+	padding-top:120px;
 }
 
 /* --------NAV-------- */
 
 .navbar-default {
 	background-color:$blue-menu;
-	border:0;
+	height:50px;
 
-	&.navbar {
-    	margin-bottom: 0px;
+	.navbar {
+
+		li {
+			float:right;
+			list-style:none;
+
+			a {
+				display:block;
+    			padding: 0 20px 0 20px;
+				color:white;
+				height:50px;
+				line-height:50px;
+
+				&:hover, &.active {
+					transition: background-color 0.5s ease;
+					background-color:$blue;
+				}
+			}
+		}
 	}
 
-	.navbar-nav > li > a.dropdown-toggle {
-		color:white;
-	}
-
-	.navbar-nav > .open > a.dropdown-toggle,
-	.navbar-nav > .open > a.dropdown-toggle:hover,
-	.navbar-nav > .open > a.dropdown-toggle:focus {
-		background-color:$blue;
-		color:white;
+	.navbar-right {
+		float:right;
 	}
 	
 	.navbar-brand {
+		display:block;
+		float:left;
 		background:url("/images/logo-white.png");
 		background-size:175px 50px;
 		height:50px;
 		width:175px;
+
+		&:hover {
+			opacity: 0.7;
+			transition: opacity 0.5s ease;
+		}
 	}
 }
 
-.dropdown-menu {
+.dropdown {
+	position:relative;
+
+	.dropdown-toggle .fa {
+		padding:0 5px 0 5px;
+	}
+}
+
+.navbar-default .navbar .dropdown-menu {
+	position:absolute;
 	background: $default-background;
-	border: 2px solid $menu-border;
-	padding:15px;
+	border-bottom: 1px solid $menu-border;
+	border-left: 1px solid $menu-border;
+	border-right: 1px solid $menu-border;
+	box-shadow: 0px 1px 5px 1px rgba(219,219,219,1);
+	margin:0;
+	width:100%;
+	box-sizing:border-box;
+	z-index:1000;
 
-	li a {
-		color:$text-color;
-	    margin: 0 0 10px 0;
-    	padding: 10px 0 10px 10px;
+	li {
+		float:none;
 
-    	&:hover, &:focus {
-    		background:darken($default-background, 5%)
-    	}
-	}
-	
-	&:after, &:before {
-		bottom: 100%;
-		right: 10%;
-		border: solid transparent;
-		content: " ";
-		height: 0;
-		width: 0;
-		position: absolute;
-		pointer-events: none;
-	}
-	&:after {
-		border-color: rgba(0, 0, 0, 0);
-		border-bottom-color: $default-background;
-		border-width: 5px;
-		margin-left: -5px;
-	}
-	&:before {
-		border-color: rgba(236, 237, 237, 0);
-		border-bottom-color: #eceded;
-		border-width: 8px;
-		margin-left: -8px;
+		a {
+			color:$text-color;
+		    margin: 0 0 10px 0;
+	    	padding: 10px 0 10px 10px;
+	    	display:block;
+	    	padding-left:20px;
+	    	height:40px;
+	    	line-height:40px;
+	    	font-size:16px;
+
+	    	&:hover, &:focus {
+	    		background:darken($default-background, 5%)
+	    	}
+	    }
 	}
 }
 
@@ -189,111 +202,103 @@ a.burger-menu {
 	margin-top:50px;
 	display:block;
 
-	.glyphicon {
+	.fa {
 		top:5px;
-	}
-	&:hover, &:focus {
-		text-decoration:none;
 	}
 }
 
 /* --------BUTTONS-------- */
 
-a.btn-primary, a.btn, .dropdown-menu > li > a.btn {
-	border: 0px solid transparent;
+a.btn, button, .navbar-default .navbar .dropdown-menu li a.btn {
 	position:relative;
-	border-radius:3;
 	height:50px;
+	line-height:50px;
 	padding-right:25px;
+	padding-left:75px;
+	padding-top: 0;
+	padding-bottom: 0;
 	display:inline-block;
 	color:white;
 	text-transform:uppercase;
-	font-family: 'Roboto', sans-serif;
     font-size: 16px;
-	
-	&:hover {
-		color:white;
-		text-decoration:none;
+    box-shadow: 0px 2px 0px -1px #8c8c8c;
+    border:0;
+    margin-top:20px;
+
+
+	.fa {
+		top:0;
+		left:0;
+		position: absolute;
+		width:50px;
+		line-height:50px;
 	}
 	
 	&.accept {
 		background:$green;
-		box-shadow: 0px 3px 0px -1px #6c9629;
 		
-		.glyphicon {
-			background:darken($green, 10%);
-		}
-		&.square-btn .glyphicon {
+		&.square-btn .fa {
 			background:$green;
 		}
-		&:hover, &:hover .glyphicon {
+		.fa, &:hover, &:hover > .fa {
 			background:darken($green, 10%);
 		}
 	}
 
 	&.default {
 		background:$blue;
-		box-shadow: 0px 3px 0px -1px #1c2950;
 
-		.glyphicon  {
-			background:darken($blue, 10%);
-		}
-		&.square-btn .glyphicon {
+		&.square-btn .fa {
 			background:$blue;
 		}
-		&:hover, &:hover .glyphicon {
-			background-color:darken($blue, 10%) !important;
+		.fa, &:hover, &:hover > .fa {
+			background:darken($blue, 10%);
 		}
 	}
-	
-	.glyphicon {
-		top:0;
-		height: 100%;
-		left:0;
-		position: absolute;
-		width:50px;
-		line-height:50px;
+
+	&.warning {
+		background:$red;
+
+		&.square-btn .fa {
+			background:$red;
+		}
+		.fa, &:hover, &:hover > .fa {
+			background:darken($red, 10%);
+		}
+	}
+
+	&:hover, &:hover > .fa {
+		transition: background-color 0.3s ease;
 	}
 
 	&.big-btn {
 		height:$big-btn;
 		padding-left:$big-btn+25px;
-		line-height:50px;
+		line-height:$big-btn;
 		font-size:20px;
 
-		.glyphicon {
-			width:60px;
-			line-height:60px;
-		}
-
-		span {
-			font-size:18px;
+		.fa {
+			width:$big-btn;
+			line-height:$big-btn;
 		}
 	} 
 
 	&.tiny-btn {
 		height:$tiny-btn;
 		padding-left:$tiny-btn+25px;
-		line-height:35px;
+		line-height:$tiny-btn;
 
-		.glyphicon {
-			width:40px;
-			line-height:40px;
+		.fa {
+			width:$tiny-btn;
+			line-height:$tiny-btn;
 		}
 	} 
 
 	&.square-btn {
 		padding:0;
 
-		.glyphicon {
+		.fa {
 			position: relative;
-			top:0;
-		}
-		&.tiny-btn {
-			height:$tiny-btn;
-		}
-		&.big-btn {
-			height:$big-btn;
 		}
 	} 
 
@@ -311,7 +316,7 @@ a.btn-primary, a.btn, .dropdown-menu > li > a.btn {
 }
 
 .has-feedback-left {
-	.glyphicon {
+	.fa {
 		left:0;
 		position: absolute;
 		line-height:40px;
@@ -320,10 +325,6 @@ a.btn-primary, a.btn, .dropdown-menu > li > a.btn {
 	input {
 		padding-left:30px;
 	}
-}
-
-form i.glyphicon {
-	color:$glyphicons;
 }
 
 .left-inner-addon {
@@ -346,6 +347,7 @@ img {
 
 	&.big-profile {
 		border-radius: 50%;
+		margin-bottom:20px;
 		width: $big-profile;
 		height: $big-profile;
 	}
@@ -356,10 +358,6 @@ img {
 .profile {
 
 	.info {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		margin-left:$big-profile +30px;
 
 		span {
 			display:block;
@@ -373,4 +371,30 @@ img {
 			font-weight:bold;
 		}
 	}
+}
+
+/* VALIDATION */
+
+.help-block {
+	position: relative;
+    padding: 20px;
+    background: white;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 10px;
+    background: #f2dee5;
+}
+.help-block:after {
+	bottom: 100%;
+	left: 10%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(242, 222, 229, 0);
+	border-bottom-color: #f2dee5;
+	border-width: 10px;
+	margin-left: -10px;
 }
