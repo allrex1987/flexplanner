@@ -106,11 +106,6 @@ b {
   height: 50px;
 }
 
-.navbar-team {
-  background-color: lightgrey;
-  height: 80px;
-}
-
 .navbar-brand {
   display: block;
   float: left;
@@ -128,14 +123,11 @@ b {
 
 .navbar {
   height: 50px;
-}
-
-.navbar li {
   float: right;
-  list-style: none;
 }
 
-.navbar li a {
+.navbar a {
+  float: right;
   display: block;
   padding: 0 20px 0 20px;
   color: white;
@@ -143,78 +135,75 @@ b {
   line-height: 50px;
 }
 
-.navbar li a:hover,
-.navbar li a.active,
+.navbar a:hover,
+.navbar a.active,
 .navbar .dropdown:hover .dropdown-toggle {
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #465e9e;
 }
 
-.navbar .navbar-right {
-  float: right;
+.navbar .fa {
+  padding: 0 7px 0 7px;
+}
+
+.navbar-team {
+  background-color: #d9d9d9;
 }
 
 .navbar-team .navbar {
-  height: 80px;
+  float: left;
 }
 
-.navbar-team .navbar li a {
-  color: grey;
-  height: 80px;
-  line-height: 80px;
+.navbar-team .navbar a {
+  color: #636b6f;
 }
 
-.navbar-team .navbar li a:hover,
-.navbar-team .navbar li a.active,
-.navbar-team .navbar .dropdown:hover .dropdown-toggle {
-  background-color: grey;
-}
-
-.navbar .dropdown-menu {
+.dropdown-menu {
   position: absolute;
+  top: 50px;
+  width: 100%;
   display: none;
   background: #ededed;
   border-bottom: 1px solid #d9d9d9;
   border-left: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
   box-shadow: 0px 1px 5px 1px #dbdbdb;
-  margin: 0;
-  width: 100%;
   box-sizing: border-box;
   z-index: 1000;
 }
 
-.navbar .dropdown-menu li {
+.dropdown-menu a {
   float: none;
-}
-
-.navbar .dropdown-menu li a {
   color: #636b6f;
   margin: 0 0 10px 0;
-  padding: 10px 0 10px 10px;
+  padding: 10px 25px 10px 20px;
   display: block;
-  padding-left: 20px;
+  white-space: nowrap;
   height: 40px;
   line-height: 40px;
   font-size: 16px;
 }
 
-.navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:focus {
+.dropdown-menu a:hover, .dropdown-menu a:focus {
   background: #e0e0e0;
+}
+
+.dropdown-menu .fa {
+  padding: 0 7px 0 0px;
 }
 
 .dropdown {
   position: relative;
-  disply: inline-block;
-}
-
-.dropdown .dropdown-toggle .fa {
-  padding: 0 5px 0 5px;
+  display: inline-block;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: inline-table;
+}
+
+.dropdown:hover .dropdown-toggle {
+  color: white;
 }
 
 a.burger-menu {
@@ -228,7 +217,7 @@ a.burger-menu .fa {
 }
 
 /* --------BUTTONS-------- */
-a.btn, button, .navbar-default .navbar .dropdown-menu li a.btn {
+a.btn, button, .navbar-default .navbar .dropdown-menu a.btn {
   position: relative;
   height: 50px;
   line-height: 50px;
@@ -245,7 +234,7 @@ a.btn, button, .navbar-default .navbar .dropdown-menu li a.btn {
   margin-top: 20px;
 }
 
-a.btn .fa, button .fa, .navbar-default .navbar .dropdown-menu li a.btn .fa {
+a.btn .fa, button .fa, .navbar-default .navbar .dropdown-menu a.btn .fa {
   top: 0;
   left: 0;
   position: absolute;
@@ -253,79 +242,79 @@ a.btn .fa, button .fa, .navbar-default .navbar .dropdown-menu li a.btn .fa {
   line-height: 50px;
 }
 
-a.btn.accept, button.accept, .navbar-default .navbar .dropdown-menu li a.btn.accept {
+a.btn.accept, button.accept, .navbar-default .navbar .dropdown-menu a.btn.accept {
   background: #1bbc9b;
 }
 
-a.btn.accept.square-btn .fa, button.accept.square-btn .fa, .navbar-default .navbar .dropdown-menu li a.btn.accept.square-btn .fa {
+a.btn.accept.square-btn .fa, button.accept.square-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.accept.square-btn .fa {
   background: #1bbc9b;
 }
 
-a.btn.accept .fa, a.btn.accept:hover, a.btn.accept:hover > .fa, button.accept .fa, button.accept:hover, button.accept:hover > .fa, .navbar-default .navbar .dropdown-menu li a.btn.accept .fa, .navbar-default .navbar .dropdown-menu li a.btn.accept:hover, .navbar-default .navbar .dropdown-menu li a.btn.accept:hover > .fa {
+a.btn.accept .fa, a.btn.accept:hover, a.btn.accept:hover > .fa, button.accept .fa, button.accept:hover, button.accept:hover > .fa, .navbar-default .navbar .dropdown-menu a.btn.accept .fa, .navbar-default .navbar .dropdown-menu a.btn.accept:hover, .navbar-default .navbar .dropdown-menu a.btn.accept:hover > .fa {
   background: #158f76;
 }
 
-a.btn.default, button.default, .navbar-default .navbar .dropdown-menu li a.btn.default {
+a.btn.default, button.default, .navbar-default .navbar .dropdown-menu a.btn.default {
   background: #465e9e;
 }
 
-a.btn.default.square-btn .fa, button.default.square-btn .fa, .navbar-default .navbar .dropdown-menu li a.btn.default.square-btn .fa {
+a.btn.default.square-btn .fa, button.default.square-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.default.square-btn .fa {
   background: #465e9e;
 }
 
-a.btn.default .fa, a.btn.default:hover, a.btn.default:hover > .fa, button.default .fa, button.default:hover, button.default:hover > .fa, .navbar-default .navbar .dropdown-menu li a.btn.default .fa, .navbar-default .navbar .dropdown-menu li a.btn.default:hover, .navbar-default .navbar .dropdown-menu li a.btn.default:hover > .fa {
+a.btn.default .fa, a.btn.default:hover, a.btn.default:hover > .fa, button.default .fa, button.default:hover, button.default:hover > .fa, .navbar-default .navbar .dropdown-menu a.btn.default .fa, .navbar-default .navbar .dropdown-menu a.btn.default:hover, .navbar-default .navbar .dropdown-menu a.btn.default:hover > .fa {
   background: #36497b;
 }
 
-a.btn.warning, button.warning, .navbar-default .navbar .dropdown-menu li a.btn.warning {
+a.btn.warning, button.warning, .navbar-default .navbar .dropdown-menu a.btn.warning {
   background: #e05b4a;
 }
 
-a.btn.warning.square-btn .fa, button.warning.square-btn .fa, .navbar-default .navbar .dropdown-menu li a.btn.warning.square-btn .fa {
+a.btn.warning.square-btn .fa, button.warning.square-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.warning.square-btn .fa {
   background: #e05b4a;
 }
 
-a.btn.warning .fa, a.btn.warning:hover, a.btn.warning:hover > .fa, button.warning .fa, button.warning:hover, button.warning:hover > .fa, .navbar-default .navbar .dropdown-menu li a.btn.warning .fa, .navbar-default .navbar .dropdown-menu li a.btn.warning:hover, .navbar-default .navbar .dropdown-menu li a.btn.warning:hover > .fa {
+a.btn.warning .fa, a.btn.warning:hover, a.btn.warning:hover > .fa, button.warning .fa, button.warning:hover, button.warning:hover > .fa, .navbar-default .navbar .dropdown-menu a.btn.warning .fa, .navbar-default .navbar .dropdown-menu a.btn.warning:hover, .navbar-default .navbar .dropdown-menu a.btn.warning:hover > .fa {
   background: #d33824;
 }
 
-a.btn:hover, a.btn:hover > .fa, button:hover, button:hover > .fa, .navbar-default .navbar .dropdown-menu li a.btn:hover, .navbar-default .navbar .dropdown-menu li a.btn:hover > .fa {
+a.btn:hover, a.btn:hover > .fa, button:hover, button:hover > .fa, .navbar-default .navbar .dropdown-menu a.btn:hover, .navbar-default .navbar .dropdown-menu a.btn:hover > .fa {
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
-a.btn.big-btn, button.big-btn, .navbar-default .navbar .dropdown-menu li a.btn.big-btn {
+a.btn.big-btn, button.big-btn, .navbar-default .navbar .dropdown-menu a.btn.big-btn {
   height: 60px;
   padding-left: 85px;
   line-height: 60px;
   font-size: 20px;
 }
 
-a.btn.big-btn .fa, button.big-btn .fa, .navbar-default .navbar .dropdown-menu li a.btn.big-btn .fa {
+a.btn.big-btn .fa, button.big-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.big-btn .fa {
   width: 60px;
   line-height: 60px;
 }
 
-a.btn.tiny-btn, button.tiny-btn, .navbar-default .navbar .dropdown-menu li a.btn.tiny-btn {
+a.btn.tiny-btn, button.tiny-btn, .navbar-default .navbar .dropdown-menu a.btn.tiny-btn {
   height: 40px;
   padding-left: 65px;
   line-height: 40px;
 }
 
-a.btn.tiny-btn .fa, button.tiny-btn .fa, .navbar-default .navbar .dropdown-menu li a.btn.tiny-btn .fa {
+a.btn.tiny-btn .fa, button.tiny-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.tiny-btn .fa {
   width: 40px;
   line-height: 40px;
 }
 
-a.btn.square-btn, button.square-btn, .navbar-default .navbar .dropdown-menu li a.btn.square-btn {
+a.btn.square-btn, button.square-btn, .navbar-default .navbar .dropdown-menu a.btn.square-btn {
   padding: 0;
 }
 
-a.btn.square-btn .fa, button.square-btn .fa, .navbar-default .navbar .dropdown-menu li a.btn.square-btn .fa {
+a.btn.square-btn .fa, button.square-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.square-btn .fa {
   position: relative;
 }
 
-a.btn.section-btn, button.section-btn, .navbar-default .navbar .dropdown-menu li a.btn.section-btn {
+a.btn.section-btn, button.section-btn, .navbar-default .navbar .dropdown-menu a.btn.section-btn {
   position: absolute;
   top: 30px;
   right: 30px;

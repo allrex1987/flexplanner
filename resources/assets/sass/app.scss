@@ -117,11 +117,6 @@ b {
 	height:50px;
 }
 
-.navbar-team {
-	background-color:lightgrey;
-	height:80px;
-}
-
 .navbar-brand {
 	display:block;
 	float:left;
@@ -138,92 +133,87 @@ b {
 
 .navbar {
 	height:50px;
+	float:right;
 
-	li {
+	a {
 		float:right;
-		list-style:none;
-
-		a {
-			display:block;
-			padding: 0 20px 0 20px;
-			color:white;
-			height:50px;
-			line-height:50px;
-		}
+		display:block;
+		padding: 0 20px 0 20px;
+		color:white;
+		height:50px;
+		line-height:50px;
 	}
 
-	li a:hover,
-	li a.active,
+	a:hover,
+	a.active,
 	.dropdown:hover .dropdown-toggle {
 		transition: background-color 0.5s ease;
 		background-color:$blue;
 	}
 
-	.navbar-right {
-		float:right;
+	.fa {
+		padding:0 7px 0 7px;
 	}
 }
 
-.navbar-team .navbar {
-	height:80px;
+.navbar-team {
+	background-color:darken($default-background, 8%);
 
-	li a {
-		color:grey;
-		height:80px;
-		line-height:80px;
-	}
+	.navbar {
+		float:left;
 
-	li a:hover,
-	li a.active,
-	.dropdown:hover .dropdown-toggle {
-		background-color:grey;
+		a {
+			color:$text-color;
+		}
 	}
 }
 
-.navbar .dropdown-menu {
+.dropdown-menu {
 	position:absolute;
+	top:50px;
+	width:100%;
 	display:none;
 	background: $default-background;
 	border-bottom: 1px solid $menu-border;
 	border-left: 1px solid $menu-border;
 	border-right: 1px solid $menu-border;
 	box-shadow: 0px 1px 5px 1px rgba(219,219,219,1);
-	margin:0;
-	width:100%;
 	box-sizing:border-box;
 	z-index:1000;
 
-	li {
+	a {
 		float:none;
+		color:$text-color;
+	    margin: 0 0 10px 0;
+    	padding: 10px 25px 10px 20px;
+    	display:block;
+    	white-space: nowrap;
+    	height:40px;
+    	line-height:40px;
+    	font-size:16px;
 
-		a {
-			color:$text-color;
-		    margin: 0 0 10px 0;
-	    	padding: 10px 0 10px 10px;
-	    	display:block;
-	    	padding-left:20px;
-	    	height:40px;
-	    	line-height:40px;
-	    	font-size:16px;
+    	&:hover, &:focus {
+    		background:darken($default-background, 5%);
+    	}
+	}
 
-	    	&:hover, &:focus {
-	    		background:darken($default-background, 5%)
-	    	}
-	    }
+	.fa {
+		padding:0 7px 0 0px;
 	}
 }
 
 .dropdown {
 	position:relative;
-	disply:inline-block;
+	display:inline-block;
 
-	.dropdown-toggle .fa {
-		padding:0 5px 0 5px;
-	}
 	&:hover .dropdown-menu {
-	    display: block;
+	    display: inline-table;
+	}
+	&:hover .dropdown-toggle {
+		color:white;
 	}
 }
+
 
 a.burger-menu {
 
@@ -238,7 +228,7 @@ a.burger-menu {
 
 /* --------BUTTONS-------- */
 
-a.btn, button, .navbar-default .navbar .dropdown-menu li a.btn {
+a.btn, button, .navbar-default .navbar .dropdown-menu a.btn {
 	position:relative;
 	height:50px;
 	line-height:50px;

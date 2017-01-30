@@ -38,58 +38,50 @@
 
                 </div>
 
-                <div class="nav">
+                <div class="nav row">
 
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <!--{{ config('app.name', 'Laravel') }} -->
                     </a>
 
-                    <ul class="navbar navbar-right">
+                    <div class="navbar">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li>
-                                <a {{ (Request::is('login') ? 'class=active' : '') }} href="{{ url('/login') }}">Logga in</a>
-                            </li>
-                            <li>
-                                <a {{ (Request::is('register') ? 'class=active' : '') }} href="{{ url('/register') }}">Skaffa konto</a>
-                            </li>
+                            <a {{ (Request::is('login') ? 'class=active' : '') }} href="{{ url('/login') }}">Logga in</a>
+                            <a {{ (Request::is('register') ? 'class=active' : '') }} href="{{ url('/register') }}">Skaffa konto</a>
                         @else
-                            <li class="dropdown">
+                            <div class="dropdown">
                                 <a href="#" class="dropdown-toggle">
                                     <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
                                     {{ Auth::user()->name }}
                                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </a>
 
-                                <ul class="dropdown-menu">
-									<li>
-                                        <a href="{{ url('profile') }}">
-													Din profil
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <!--<a class="btn default tiny-btn" href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
-                                                     Logga ut
-                                        </a>-->
+                                <div class="dropdown-menu">
+                                    <a href="{{ url('profile') }}">
+												Din profil
+                                    </a>
+                                    <!--<a class="btn default tiny-btn" href="{{ url('/logout') }}"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                                 Logga ut
+                                    </a>-->
 
-                                         <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
-                                                     Logga ut
-                                        </a>
+                                     <a href="{{ url('/logout') }}"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                                 Logga ut
+                                    </a>
 
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
+                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </div>
+                            </div>
                         @endif
-                    </ul>
+                    </div>
                 </div>
             </div>
         </nav>
