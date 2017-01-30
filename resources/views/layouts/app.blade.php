@@ -58,8 +58,9 @@
                                 </a>
 
                                 <div class="dropdown-menu">
-                                    <a href="{{ url('profile') }}">
-												Din profil
+                                    <a class="btn default" href="{{ url('profile/edit') }}">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+                                                Redigera profil
                                     </a>
                                     <a class="btn warning" href="{{ url('/logout') }}"
                                         onclick="event.preventDefault();
