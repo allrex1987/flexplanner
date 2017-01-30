@@ -58,7 +58,7 @@
                                 </a>
 
                                 <div class="dropdown-menu">
-                                    <a class="btn default" href="{{ url('profile/edit') }}">
+                                    <a href="{{ url('profile/edit') }}">
 												<i class="fa fa-pencil" aria-hidden="true"></i>
                                                 Redigera profil
                                     </a>

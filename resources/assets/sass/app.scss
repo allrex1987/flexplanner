@@ -425,3 +425,104 @@ img {
 	border-width: 10px;
 	margin-left: -10px;
 }
+
+/* CALENDAR */
+/* Month header */
+.month {
+    padding: 10px 25px;
+    text-align:center;
+    ul {
+	    margin: 0;
+	    line-height:25px;
+	    list-style:none;
+
+	    li {
+		    font-size: 20px;
+		    text-transform: uppercase;
+		    letter-spacing: 3px;
+		    margin-bottom:0;
+		}
+	}
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0px 0 0;
+    border-bottom: 1px solid gainsboro;
+    border-top: 1px solid gainsboro;
+
+    li {
+    	display: inline-block;
+	    width: 13.6%;
+	    color: #666;
+	    text-align: center;
+    }
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+
+    li {
+        list-style-type: none;
+	    display: inline-block;
+	    width: 13.6%;
+	    min-height: 70px;
+	    text-align: left;
+	    padding: 5px;
+	    box-sizing: border-box;
+	    margin-bottom: 5px;
+	    font-size: 12px;
+	    position:relative;
+
+	    .active {
+		    padding: 5px;
+		    background: #c60931;
+		    color: white !important;
+		    border-radius:50%;
+		}
+	}
+	/*remove*/
+	.todo-1, .todo-2, .todo-3 {
+		width:100%;
+		background:#e5dc8e;
+		height:18px;
+		padding-left:10px;
+		display:block;
+		top:30px;
+		position:absolute;
+	}
+	.todo-2 {
+		background:pink;
+		top:55px;
+	}
+	.todo-3 {
+		background:#0098d7;
+	}
+}
+
+.yellow {
+	color:#e5dc8e;
+	margin-right:7px;
+}
+.pink {
+	color:pink;
+	margin-right:7px;
+}
+.blue {
+	color:#0098d7;
+	margin-right:7px;
+}

@@ -30,26 +30,23 @@
                 </div>
             </div>
 
-             <div class="dropdown">
-                <div>
-                <a href="#" class="dropdown-toggle">
-                    <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
-                    Stena Line Inhouse
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <div class="dropdown">
+
+            <a href="#" class="dropdown-toggle">
+                <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+                Stena Line Inhouse
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </a>
+
+            <div class="dropdown-menu">
+                <a href="#">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    Hantera medlemmar
                 </a>
-
-                <div class="dropdown-menu">
-                    <a href="{{ url('profile') }}">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                        Hantera medlemmar
-                    </a>
-
-
-                    <a href="{{ url('teams') }}">
-                        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
-                        Gå ur
-                    </a>
-                </div>
+                <a href="#">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                    Hantera formulär
+                </a>
             </div>
         </div>
     </div>
