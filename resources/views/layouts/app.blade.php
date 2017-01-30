@@ -61,14 +61,7 @@
                                     <a href="{{ url('profile') }}">
 												Din profil
                                     </a>
-                                    <!--<a class="btn default tiny-btn" href="{{ url('/logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
-                                                 Logga ut
-                                    </a>-->
-
-                                     <a href="{{ url('/logout') }}"
+                                    <a class="btn warning" href="{{ url('/logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                                  <i class="fa fa-sign-out" aria-hidden="true"></i>

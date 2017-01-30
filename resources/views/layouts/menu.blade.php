@@ -5,23 +5,27 @@
         <div class="navbar">
             <div class="dropdown">
                 <a href="#" class="dropdown-toggle">
-                    <i class="fa fa-retweet" aria-hidden="true"></i>
-                    Ändra team
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    Team
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </a>
 
                 <div class="dropdown-menu">
-                    <a href="{{ url('profile') }}">
+                    <a href="#">
                         <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
                         Tinypickle
                     </a>
-                    <a href="{{ url('teams') }}">
+                    <a href="#">
                         <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
                         Everyones Team
                     </a>
-                     <a href="{{ url('teams') }}">
+                     <a href="#">
                         <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
                         Everyones Team a very very long team
+                    </a>
+                     <a class="btn accept text-center" href="#">
+                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+                        Skapa nytt team
                     </a>
                 </div>
             </div>

@@ -180,6 +180,7 @@ b {
 	box-shadow: 0px 1px 5px 1px rgba(219,219,219,1);
 	box-sizing:border-box;
 	z-index:1000;
+	padding-top:20px;
 
 	a {
 		float:none;
@@ -228,15 +229,18 @@ a.burger-menu {
 
 /* --------BUTTONS-------- */
 
-a.btn, button, .navbar-default .navbar .dropdown-menu a.btn {
+a.btn, button,
+.navbar .dropdown-menu a.btn {
 	position:relative;
+	margin: 0 auto;
+    display: inline-block;
+	text-align:center;
 	height:50px;
 	line-height:50px;
 	padding-right:25px;
 	padding-left:75px;
 	padding-top: 0;
 	padding-bottom: 0;
-	display:inline-block;
 	color:white;
 	text-transform:uppercase;
     font-size: 16px;
@@ -251,6 +255,7 @@ a.btn, button, .navbar-default .navbar .dropdown-menu a.btn {
 		position: absolute;
 		width:50px;
 		line-height:50px;
+		padding:0px;
 	}
 	
 	&.accept {
@@ -326,6 +331,9 @@ a.btn, button, .navbar-default .navbar .dropdown-menu a.btn {
 		top:30px;
 		right:30px;
 	}
+}
+.navbar .dropdown-menu a.btn {
+	display:block;
 }
 
 /* --------FORMS-------- */

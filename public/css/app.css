@@ -171,6 +171,7 @@ b {
   box-shadow: 0px 1px 5px 1px #dbdbdb;
   box-sizing: border-box;
   z-index: 1000;
+  padding-top: 20px;
 }
 
 .dropdown-menu a {
@@ -217,15 +218,18 @@ a.burger-menu .fa {
 }
 
 /* --------BUTTONS-------- */
-a.btn, button, .navbar-default .navbar .dropdown-menu a.btn {
+a.btn, button,
+.navbar .dropdown-menu a.btn {
   position: relative;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
   height: 50px;
   line-height: 50px;
   padding-right: 25px;
   padding-left: 75px;
   padding-top: 0;
   padding-bottom: 0;
-  display: inline-block;
   color: white;
   text-transform: uppercase;
   font-size: 16px;
@@ -234,90 +238,120 @@ a.btn, button, .navbar-default .navbar .dropdown-menu a.btn {
   margin-top: 20px;
 }
 
-a.btn .fa, button .fa, .navbar-default .navbar .dropdown-menu a.btn .fa {
+a.btn .fa, button .fa,
+.navbar .dropdown-menu a.btn .fa {
   top: 0;
   left: 0;
   position: absolute;
   width: 50px;
   line-height: 50px;
+  padding: 0px;
 }
 
-a.btn.accept, button.accept, .navbar-default .navbar .dropdown-menu a.btn.accept {
+a.btn.accept, button.accept,
+.navbar .dropdown-menu a.btn.accept {
   background: #1bbc9b;
 }
 
-a.btn.accept.square-btn .fa, button.accept.square-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.accept.square-btn .fa {
+a.btn.accept.square-btn .fa, button.accept.square-btn .fa,
+.navbar .dropdown-menu a.btn.accept.square-btn .fa {
   background: #1bbc9b;
 }
 
-a.btn.accept .fa, a.btn.accept:hover, a.btn.accept:hover > .fa, button.accept .fa, button.accept:hover, button.accept:hover > .fa, .navbar-default .navbar .dropdown-menu a.btn.accept .fa, .navbar-default .navbar .dropdown-menu a.btn.accept:hover, .navbar-default .navbar .dropdown-menu a.btn.accept:hover > .fa {
+a.btn.accept .fa, a.btn.accept:hover, a.btn.accept:hover > .fa, button.accept .fa, button.accept:hover, button.accept:hover > .fa,
+.navbar .dropdown-menu a.btn.accept .fa,
+.navbar .dropdown-menu a.btn.accept:hover,
+.navbar .dropdown-menu a.btn.accept:hover > .fa {
   background: #158f76;
 }
 
-a.btn.default, button.default, .navbar-default .navbar .dropdown-menu a.btn.default {
+a.btn.default, button.default,
+.navbar .dropdown-menu a.btn.default {
   background: #465e9e;
 }
 
-a.btn.default.square-btn .fa, button.default.square-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.default.square-btn .fa {
+a.btn.default.square-btn .fa, button.default.square-btn .fa,
+.navbar .dropdown-menu a.btn.default.square-btn .fa {
   background: #465e9e;
 }
 
-a.btn.default .fa, a.btn.default:hover, a.btn.default:hover > .fa, button.default .fa, button.default:hover, button.default:hover > .fa, .navbar-default .navbar .dropdown-menu a.btn.default .fa, .navbar-default .navbar .dropdown-menu a.btn.default:hover, .navbar-default .navbar .dropdown-menu a.btn.default:hover > .fa {
+a.btn.default .fa, a.btn.default:hover, a.btn.default:hover > .fa, button.default .fa, button.default:hover, button.default:hover > .fa,
+.navbar .dropdown-menu a.btn.default .fa,
+.navbar .dropdown-menu a.btn.default:hover,
+.navbar .dropdown-menu a.btn.default:hover > .fa {
   background: #36497b;
 }
 
-a.btn.warning, button.warning, .navbar-default .navbar .dropdown-menu a.btn.warning {
+a.btn.warning, button.warning,
+.navbar .dropdown-menu a.btn.warning {
   background: #e05b4a;
 }
 
-a.btn.warning.square-btn .fa, button.warning.square-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.warning.square-btn .fa {
+a.btn.warning.square-btn .fa, button.warning.square-btn .fa,
+.navbar .dropdown-menu a.btn.warning.square-btn .fa {
   background: #e05b4a;
 }
 
-a.btn.warning .fa, a.btn.warning:hover, a.btn.warning:hover > .fa, button.warning .fa, button.warning:hover, button.warning:hover > .fa, .navbar-default .navbar .dropdown-menu a.btn.warning .fa, .navbar-default .navbar .dropdown-menu a.btn.warning:hover, .navbar-default .navbar .dropdown-menu a.btn.warning:hover > .fa {
+a.btn.warning .fa, a.btn.warning:hover, a.btn.warning:hover > .fa, button.warning .fa, button.warning:hover, button.warning:hover > .fa,
+.navbar .dropdown-menu a.btn.warning .fa,
+.navbar .dropdown-menu a.btn.warning:hover,
+.navbar .dropdown-menu a.btn.warning:hover > .fa {
   background: #d33824;
 }
 
-a.btn:hover, a.btn:hover > .fa, button:hover, button:hover > .fa, .navbar-default .navbar .dropdown-menu a.btn:hover, .navbar-default .navbar .dropdown-menu a.btn:hover > .fa {
+a.btn:hover, a.btn:hover > .fa, button:hover, button:hover > .fa,
+.navbar .dropdown-menu a.btn:hover,
+.navbar .dropdown-menu a.btn:hover > .fa {
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
-a.btn.big-btn, button.big-btn, .navbar-default .navbar .dropdown-menu a.btn.big-btn {
+a.btn.big-btn, button.big-btn,
+.navbar .dropdown-menu a.btn.big-btn {
   height: 60px;
   padding-left: 85px;
   line-height: 60px;
   font-size: 20px;
 }
 
-a.btn.big-btn .fa, button.big-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.big-btn .fa {
+a.btn.big-btn .fa, button.big-btn .fa,
+.navbar .dropdown-menu a.btn.big-btn .fa {
   width: 60px;
   line-height: 60px;
 }
 
-a.btn.tiny-btn, button.tiny-btn, .navbar-default .navbar .dropdown-menu a.btn.tiny-btn {
+a.btn.tiny-btn, button.tiny-btn,
+.navbar .dropdown-menu a.btn.tiny-btn {
   height: 40px;
   padding-left: 65px;
   line-height: 40px;
 }
 
-a.btn.tiny-btn .fa, button.tiny-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.tiny-btn .fa {
+a.btn.tiny-btn .fa, button.tiny-btn .fa,
+.navbar .dropdown-menu a.btn.tiny-btn .fa {
   width: 40px;
   line-height: 40px;
 }
 
-a.btn.square-btn, button.square-btn, .navbar-default .navbar .dropdown-menu a.btn.square-btn {
+a.btn.square-btn, button.square-btn,
+.navbar .dropdown-menu a.btn.square-btn {
   padding: 0;
 }
 
-a.btn.square-btn .fa, button.square-btn .fa, .navbar-default .navbar .dropdown-menu a.btn.square-btn .fa {
+a.btn.square-btn .fa, button.square-btn .fa,
+.navbar .dropdown-menu a.btn.square-btn .fa {
   position: relative;
 }
 
-a.btn.section-btn, button.section-btn, .navbar-default .navbar .dropdown-menu a.btn.section-btn {
+a.btn.section-btn, button.section-btn,
+.navbar .dropdown-menu a.btn.section-btn {
   position: absolute;
   top: 30px;
   right: 30px;
+}
+
+.navbar .dropdown-menu a.btn {
+  display: block;
 }
 
 /* --------FORMS-------- */

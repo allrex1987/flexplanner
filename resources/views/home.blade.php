@@ -10,7 +10,13 @@
             <h1 class="panel-heading">Dashboard</h1>
 
             <div class="panel-body">
-                You are logged in!
+                <p>Här tänker jag att det ska finnas
+
+                <p>- Dina formulär listade med editeringmöjligheter + skapa nytt</p>
+                <p>- Dina beställningar?</p>
+
+
+                
             </div>
         </div>
     </div>
