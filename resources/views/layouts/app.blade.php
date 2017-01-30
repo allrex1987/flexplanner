@@ -68,11 +68,6 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ url('teams') }}">
-                                                     Dina teams
-                                        </a>
-                                    </li>
-                                     <li>
                                         <!--<a class="btn default tiny-btn" href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

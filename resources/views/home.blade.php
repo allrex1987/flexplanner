@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+@include('layouts.menu')
+
 <div class="container">
     <div class="row buff">
         <div class="three columns">
