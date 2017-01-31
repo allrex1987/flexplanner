@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="four columns offset-by-four panel arrow">
+    <div class="four columns offset-by-four panel buff">
 
         <h1 class="panel-heading text-center">
             Skaffa konto

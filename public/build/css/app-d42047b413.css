@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Slabo+13px|Roboto);
 /* --------MAIN ELEMENTS-------- */
-.columns {
-  padding: 15px;
+body {
+  background: #dfdfdf;
 }
 
 b {
@@ -35,14 +35,14 @@ b {
 }
 
 .panel, .custom-panel {
-  background: #ededed;
+  background: #e9e9e9;
   border-radius: 2px;
-  border: 1px solid #d9d9d9;
   position: relative;
+  padding: 20px;
 }
 
 .custom-panel {
-  background-color: #e4e4e4;
+  background-color: #e9e9e9;
   padding-top: 50px;
   padding-bottom: 50px;
   border: 0;
@@ -57,35 +57,6 @@ b {
   font-size: 30px;
   background: none !important;
   border-bottom: 1px solid lightgrey;
-}
-
-.panel.arrow {
-  margin-top: 30px;
-}
-
-.panel.arrow:after, .panel.arrow:before {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.panel.arrow:after {
-  border-color: transparent;
-  border-bottom-color: #ededed;
-  border-width: 15px;
-  margin-left: -15px;
-}
-
-.panel.arrow:before {
-  border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: #d9d9d9;
-  border-width: 18px;
-  margin-left: -18px;
 }
 
 .header-icon {
@@ -148,7 +119,7 @@ b {
 }
 
 .navbar-team {
-  background-color: #d9d9d9;
+  background-color: #e9e9e9;
 }
 
 .navbar-team .navbar {
@@ -164,7 +135,7 @@ b {
   top: 50px;
   width: 100%;
   display: none;
-  background: #ededed;
+  background: #e9e9e9;
   border-bottom: 1px solid #d9d9d9;
   border-left: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
@@ -187,7 +158,7 @@ b {
 }
 
 .dropdown-menu a:hover, .dropdown-menu a:focus {
-  background: #e0e0e0;
+  background: gainsboro;
 }
 
 .dropdown-menu .fa {
@@ -235,7 +206,6 @@ a.btn, button,
   font-size: 16px;
   box-shadow: 0px 2px 0px -1px #8c8c8c;
   border: 0;
-  margin-top: 20px;
 }
 
 a.btn .fa, button .fa,
@@ -435,8 +405,7 @@ img.big-profile {
   margin-left: -10px;
 }
 
-/* CALENDAR */
-/* Month header */
+/* CALENDAR FROM DOWN HERE I NEED TO CLLEEEAAANN*/
 .month {
   padding: 10px 25px;
   text-align: center;
@@ -455,36 +424,32 @@ img.big-profile {
   margin-bottom: 0;
 }
 
-/* Previous button inside month header */
 .month .prev {
   float: left;
 }
 
-/* Next button */
 .month .next {
   float: right;
 }
 
-/* Weekdays (Mon-Sun) */
 .weekdays {
   margin: 0;
   padding: 10px 0px 0 0;
-  border-bottom: 1px solid gainsboro;
-  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
 }
 
 .weekdays li {
   display: inline-block;
   width: 13.6%;
-  color: #666;
   text-align: center;
 }
 
 /* Days (1-31) */
 .days {
   padding: 10px 0;
-  background: #eee;
   margin: 0;
+  position: relative;
   /*remove*/
 }
 
@@ -503,14 +468,14 @@ img.big-profile {
 
 .days li .active {
   padding: 5px;
-  background: #c60931;
+  background: #e05b4a;
   color: white !important;
   border-radius: 50%;
 }
 
 .days .todo-1, .days .todo-2, .days .todo-3 {
   width: 100%;
-  background: #e5dc8e;
+  background: #bbadeb;
   height: 18px;
   padding-left: 10px;
   display: block;
@@ -518,28 +483,72 @@ img.big-profile {
   position: absolute;
 }
 
+.days .todo-1 .todo-text, .days .todo-2 .todo-text, .days .todo-3 .todo-text {
+  z-index: 100;
+  position: absolute;
+  white-space: pre;
+}
+
 .days .todo-2 {
-  background: pink;
+  background: #e9ebad;
   top: 55px;
 }
 
 .days .todo-3 {
-  background: #0098d7;
+  background: #d1ebad;
 }
 
-.yellow {
-  color: #e5dc8e;
-  margin-right: 7px;
+/* ITEMS */
+.form-item {
+  border-bottom: 2px solid #d9d9d9;
+  padding: 10px;
+  overflow: auto;
 }
 
-.pink {
-  color: pink;
-  margin-right: 7px;
+.form-item .form-name,
+.form-item .form-heading {
+  display: block;
 }
 
-.blue {
-  color: #0098d7;
-  margin-right: 7px;
+.form-item .form-date {
+  font-size: 10px;
+  background: #d7d7d7;
+  border-radius: 50%;
+  padding: 20px 5px;
+  width: 30px;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.form-item .form-date .date-date, .form-item .form-date .date-month {
+  display: block;
+  line-height: 3px;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  left: 0;
+  right: 0;
+}
+
+.form-item .form-date .date-month {
+  top: 25px;
+  font-size: 10px;
+}
+
+.form-item .form-heading {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.form-item .form-info {
+  float: left;
+}
+
+.form-item .form-action {
+  float: right;
 }
 
 /*# sourceMappingURL=app.css.map */

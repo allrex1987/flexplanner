@@ -8,13 +8,6 @@
     <div class="row buff">
 
         <div class="twelve columns panel">
-        	<h2 class="icon-heading">Planering</h2>
-        	<div>
-        		<h3>TODO denna månaden</h3>
-        		<i class="fa fa-square yellow" aria-hidden="true"></i><i class="fa fa-info-circle" aria-hidden="true"></i> BOKA NU Kampanj<br>
-        		<i class="fa fa-square pink" aria-hidden="true"></i><i class="fa fa-info-circle" aria-hidden="true"></i> Ändring web<br>
-        		<i class="fa fa-square blue" aria-hidden="true"></i><i class="fa fa-info-circle" aria-hidden="true"></i> Annons GP<br>
-        	</div>
         	<div class="month"> 
 		  		<ul>
 				    <li class="prev">&#10094;</li>
@@ -36,7 +29,7 @@
 			<ul class="days"> 
 				<li>
 					1
-					<span class="todo-1">BOKA NU Kampanj</span>
+					<span class="todo-1"><span class="todo-text">BOKA NU Kampanj</span></span>
 				</li
 				><li>
 					2
@@ -73,7 +66,7 @@
 				><li>
 					<span class="active">10</span>
 					<span class="todo-1"></span>
-					<span class="todo-2">Web ändring</span>
+					<span class="todo-2"><span class="todo-text">Uppdatera rubrik</span></span>
 				</li
 				><li>
 					11
@@ -105,7 +98,7 @@
 				><li>22</li
 				><li>
 					23
-					<span class="todo-3">Annons GP</span>
+					<span class="todo-3"><span class="todo-text">Annons GP</span></span>
 				</li
 				><li>24</li
 				><li>25</li
@@ -114,18 +107,60 @@
 				><li>28</li
 				><li>29</li
 				><li>30</li
-				><li>31</li
+				><li>31</li>
 			</ul>
         </div>
+    </div>
 
-        <div class="twelve columns panel">
-        	<h2 class="icon-heading">TODO</h2>
-        		<div>Sak 1</div>
-        		<div>Sak 2</div>
-        		<div>Sak 3</div>
-        		<div>Sak 4</div>
-        		<div>Sak 5</div>
-        		<div>Sak 6</div>
+    <div class="row buff">
+        <div class="one-third column panel">
+        	<h2 class="icon-heading text-center">Beställningar</h2>
+			<div class="form-item">
+				<div class="form-date"><span class="date-date">12</span><span class="date-month">Aug</span></div>
+				<div class="form-info">
+					<span class="form-name">Kampanjbrief</span>
+        			<span class="form-heading">BOKA NU Kampanj</span>
+    			</div>
+    			<div class="form-action">
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-commenting" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn accept"><i class="fa fa-check" aria-hidden="true"></i></a>
+				</div>
+			</div>
+
+			<div class="form-item">
+				<div class="form-date"><span class="date-date">16</span><span class="date-month">Aug</span></div>
+				<div class="form-info">
+					<span class="form-name">Webb ändring</span>
+        			<span class="form-heading">Uppdatera rubrik</span>
+    			</div>
+    			<div class="form-action">
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-commenting" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn accept"><i class="fa fa-check" aria-hidden="true"></i></a>
+				</div>
+			</div>
+
+			<div class="form-item">
+				<div class="form-date"><span class="date-date">24</span><span class="date-month">Aug</span></div>
+				<div class="form-info">
+					<span class="form-name">Annons 400x200</span>
+        			<span class="form-heading">Annons GP</span>
+    			</div>
+    			<div class="form-action">
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-commenting" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn accept"><i class="fa fa-check" aria-hidden="true"></i></a>
+				</div>
+			</div>
+        </div>
+         <div class="one-third column panel">
+        	<h2 class="icon-heading text-center">Pågående</h2>
+        		
+        </div>
+         <div class="one-third column panel">
+        	<h2 class="icon-heading text-center">Klart</h2>
+        		
         </div>
     </div>
 </div>

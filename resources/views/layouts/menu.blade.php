@@ -23,7 +23,7 @@
                         <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
                         Everyones Team a very very long team
                     </a>
-                     <a class="btn accept text-center" href="#">
+                    <a class="btn accept text-center" href="#">
                         <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
                         Skapa nytt team
                     </a>
@@ -40,12 +40,28 @@
 
             <div class="dropdown-menu">
                 <a href="#">
+                    <i class="fa fa-list-ol" aria-hidden="true"></i>
+                    Planering
+                </a>
+                <a href="#">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    Dina beställningar
+                </a>
+                <a href="#">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     Hantera medlemmar
                 </a>
                 <a href="#">
                     <i class="fa fa-list-alt" aria-hidden="true"></i>
                     Hantera formulär
+                </a>
+                <a class="btn accept text-center" href="#">
+                    <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+                    Nytt formulär
+                </a>
+                <a class="btn accept text-center" href="#">
+                    <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+                    Ny beställning
                 </a>
             </div>
         </div>
