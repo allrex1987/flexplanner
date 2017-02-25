@@ -4,6 +4,27 @@
 
 @include('layouts.menu')
 
+<div class="sidebar">
+	<h2 class="text-center">Aktivitet</h2>
+	<div class="activity">
+		<span class="activity-time">2 timmar sedan</span>
+		<p><span class="activity-action">Godkänd</span> - Kampanjbrief BOKA NU kampanj <span class="activity-by"><i class="fa fa-user-circle" aria-hidden="true"></i>Martina Johansson</span></p>
+	</div>
+	<div class="activity">
+		<span class="activity-time">11 timmar sedan</span>
+		<p><span class="activity-action">Klart</span>Annons GP Annons 400x200 <span class="activity-by"><i class="fa fa-user-circle" aria-hidden="true"></i>Martina Johansson</span></p>
+	</div>
+	<div class="activity">
+		<span class="activity-time">2017-02-02</span>
+		<p><span class="activity-action">Klar</span>Annons Vetlanda Posten Annons 400x200 <span class="activity-by"><i class="fa fa-user-circle" aria-hidden="true"></i>Martina Johansson</span></p>
+	</div>
+	<div class="activity">
+		<span class="activity-time">2017-02-15</span>
+		<p><span class="activity-action">Flyttad till akriv</span>Annons TT Annons 400x200 <span class="activity-by"><i class="fa fa-user-circle" aria-hidden="true"></i>Martina Johansson</span></p>
+	</div>
+	<i class="fa fa-chevron-left action" aria-hidden="true"></i>
+</div>
+
 <div class="container">
     <div class="row buff">
 
@@ -111,10 +132,37 @@
 			</ul>
         </div>
     </div>
-
     <div class="row buff">
         <div class="one-third column panel">
-        	<h2 class="icon-heading text-center">Beställningar</h2>
+        	<h2 class="icon-heading text-center">Väntande beställningar</h2>
+			<div class="form-item">
+				<div class="form-date"><span class="date-date">20</span><span class="date-month">Aug</span></div>
+				<div class="form-info">
+					<span class="form-name">Kampanjbrief</span>
+        			<span class="form-heading">Sommarkampanj</span>
+    			</div>
+    			<div class="form-action">
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn warning"><i class="fa fa-times" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn accept"><i class="fa fa-check" aria-hidden="true"></i></a>
+				</div>
+			</div>
+
+			<div class="form-item">
+				<div class="form-date"><span class="date-date">16</span><span class="date-month">Aug</span></div>
+				<div class="form-info">
+					<span class="form-name">Webb ändring</span>
+        			<span class="form-heading">Flytta sidor</span>
+    			</div>
+    			<div class="form-action">
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn warning"><i class="fa fa-times" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn accept"><i class="fa fa-check" aria-hidden="true"></i></a>
+				</div>
+			</div>
+        </div>
+         <div class="one-third column panel">
+        	<h2 class="icon-heading text-center">Godkända beställningar</h2>
 			<div class="form-item">
 				<div class="form-date"><span class="date-date">12</span><span class="date-month">Aug</span></div>
 				<div class="form-info">
@@ -122,8 +170,10 @@
         			<span class="form-heading">BOKA NU Kampanj</span>
     			</div>
     			<div class="form-action">
-    				<a class="btn square-btn tiny-btn default"><i class="fa fa-commenting" aria-hidden="true"></i></a>
     				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn default">
+    					<span class="happening">15</span>
+    					<i class="fa fa-commenting" aria-hidden="true"></i></a>
     				<a class="btn square-btn tiny-btn accept"><i class="fa fa-check" aria-hidden="true"></i></a>
 				</div>
 			</div>
@@ -135,8 +185,8 @@
         			<span class="form-heading">Uppdatera rubrik</span>
     			</div>
     			<div class="form-action">
-    				<a class="btn square-btn tiny-btn default"><i class="fa fa-commenting" aria-hidden="true"></i></a>
     				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-commenting" aria-hidden="true"></i></a>
     				<a class="btn square-btn tiny-btn accept"><i class="fa fa-check" aria-hidden="true"></i></a>
 				</div>
 			</div>
@@ -148,19 +198,27 @@
         			<span class="form-heading">Annons GP</span>
     			</div>
     			<div class="form-action">
-    				<a class="btn square-btn tiny-btn default"><i class="fa fa-commenting" aria-hidden="true"></i></a>
     				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-commenting" aria-hidden="true"></i></a>
     				<a class="btn square-btn tiny-btn accept"><i class="fa fa-check" aria-hidden="true"></i></a>
 				</div>
 			</div>
         </div>
+
          <div class="one-third column panel">
-        	<h2 class="icon-heading text-center">Pågående</h2>
-        		
-        </div>
-         <div class="one-third column panel">
-        	<h2 class="icon-heading text-center">Klart</h2>
-        		
+        	<h2 class="icon-heading text-center">Klart TODO</h2>
+        	<div class="form-item">
+				<div class="form-date"><span class="date-date">24</span><span class="date-month">Aug</span></div>
+				<div class="form-info">
+					<span class="form-name">Annons 400x200</span>
+        			<span class="form-heading">Annons GP</span>
+    			</div>
+    			<div class="form-action">
+    				<a class="btn square-btn tiny-btn default"><i class="fa fa-eye" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn warning"><i class="fa fa-undo" aria-hidden="true"></i></a>
+    				<a class="btn square-btn tiny-btn warning"><i class="fa fa-archive" aria-hidden="true"></i></a>
+				</div>
+			</div>
         </div>
     </div>
 </div>

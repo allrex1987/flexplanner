@@ -188,6 +188,50 @@ a.burger-menu .fa {
   top: 5px;
 }
 
+.sidebar {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: #2c3b64;
+  width: 230px;
+  color: white;
+}
+
+.sidebar .action {
+  width: 20px;
+  padding: 30px 0 30px 5px;
+  background: #2c3b64;
+  display: inline-block;
+  right: -25px;
+  top: 20%;
+  position: absolute;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.sidebar .activity {
+  padding: 10px 20px 10px 20px;
+  margin: 10px 20px 10px 20px;
+  font-size: 12px;
+  background-color: #344576;
+}
+
+.sidebar .activity p {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .activity-by {
+  display: inline-block;
+  width: 100%;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.sidebar .activity-by i {
+  margin-right: 5px;
+}
+
 /* --------BUTTONS-------- */
 a.btn, button,
 .navbar .dropdown-menu a.btn {
@@ -475,7 +519,7 @@ img.big-profile {
 
 .days .todo-1, .days .todo-2, .days .todo-3 {
   width: 100%;
-  background: #bbadeb;
+  background: #b5ebad;
   height: 18px;
   padding-left: 10px;
   display: block;
@@ -490,12 +534,12 @@ img.big-profile {
 }
 
 .days .todo-2 {
-  background: #e9ebad;
+  background: #adebc1;
   top: 55px;
 }
 
 .days .todo-3 {
-  background: #d1ebad;
+  background: #e0ebad;
 }
 
 /* ITEMS */
@@ -549,6 +593,19 @@ img.big-profile {
 
 .form-item .form-action {
   float: right;
+}
+
+.form-item .happening {
+  line-height: 15px;
+  width: 20px;
+  right: 0;
+  margin-top: -5px;
+  margin-left: -5px;
+  background: red;
+  display: inline-block;
+  position: absolute;
+  z-index: 10;
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=app.css.map */
